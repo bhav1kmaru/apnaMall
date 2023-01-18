@@ -7,6 +7,10 @@
   min-height: 100vh;
 }
 
+/* .home_background{
+    background-image: url(https://www.paisleystudios.com.au/wp-content/uploads/2016/04/background-banner1.jpg);
+} */
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -276,3 +280,6 @@
     transform: rotate(0deg);
   }
 }
+
+
+
