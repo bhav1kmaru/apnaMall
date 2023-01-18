@@ -1,6 +1,9 @@
+
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import "../styles/featuredProducts.css";
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 export default function App({ Component, pageProps }) {
 	return (
 		<>
@@ -18,8 +21,11 @@ export default function App({ Component, pageProps }) {
 				async></script> */}
 
 			<ChakraProvider>
-				<Component {...pageProps} />
-			</ChakraProvider>
+      <Navbar />
+      <Component {...pageProps} />
+      {/* <Footer /> */}
+    </ChakraProvider>
 		</>
 	);
+
 }

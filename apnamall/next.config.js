@@ -19,6 +19,7 @@ const nextConfig = {
 				pathname: "/images/catalog/view_item/**",
 			},
 		],
+		 domains: ['paytmmall.com'],
 	},
    
 };

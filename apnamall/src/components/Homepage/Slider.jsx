@@ -96,7 +96,7 @@ const Slider = ({DataArray}) => {
                                                     // title={product.text}
                                                     // width={10}
                                                     // height={10}
-                                                />
+                                                ></img>
                                             </span>
                                             <span className="w-100 text-center mt-1 ">
                                                 <h5 className="brand text-capitalize float-left">
