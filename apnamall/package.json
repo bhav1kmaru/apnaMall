@@ -1,29 +1,32 @@
 {
-	"name": "apnamall",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
-	},
-	"dependencies": {
-		"@chakra-ui/react": "^2.4.8",
-		"@emotion/react": "^11.10.5",
-		"@emotion/styled": "^11.10.5",
-		"@next/font": "13.1.2",
-		"axios": "^1.2.2",
-		"eslint": "8.32.0",
-		"eslint-config-next": "13.1.2",
-		"framer-motion": "^8.4.3",
-		"next": "13.1.2",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"react-owl-carousel": "^2.3.3",
+  "name": "apnamall",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.16",
+    "@chakra-ui/react": "^2.4.8",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@next/font": "13.1.2",
+    "axios": "^1.2.2",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.2",
+    "framer-motion": "^8.4.3",
+    "next": "13.1.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-rating-stars-component": "^2.2.0",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.2",
+    "react-owl-carousel": "^2.3.3",
 		"react-icons": "^4.7.1",
-		"react-redux": "^8.0.5",
-		"redux": "^4.2.0",
-		"redux-thunk": "^2.4.2"
-	}
+  }
+
 }
