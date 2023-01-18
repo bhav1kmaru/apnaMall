@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+
 	// reactStrictMode: true,
 	swcMinify: true,
 	images: {
@@ -21,7 +22,6 @@ const nextConfig = {
 		],
 		 domains: ['paytmmall.com'],
 	},
-   
 };
 
 module.exports = nextConfig;
