@@ -1,0 +1,202 @@
+/****************************************** Start Featured Products*************************************/
+  #owl-carousel-products {
+    height: auto;
+    padding-top: 25px;
+}
+
+  #owl-carousel-products .heading {
+    color: #172026;
+    font-size: 48px;
+    text-transform: capitalize;
+    font-family: 'Source Serif Pro';
+    text-align: center;
+    margin-bottom: 0;
+}
+
+   #owl-carousel-products #owl-carousel-ul {
+    float: left;
+    padding: 0;
+    max-width: 100%;
+    margin: 15px auto;
+}
+
+   #owl-carousel-products #owl-carousel-ul .owl-stage-outer {
+    max-width: 100% !important;
+    margin: 0 auto;
+}
+
+  #owl-carousel-ul  .owl-nav .owl-prev {
+    color: #000000 !important;
+    position: absolute !important;
+    left: -20px !important;
+    top: 0 !important;
+    transform: none !important;
+    display: block !important;
+    background: none !important;
+    border: none !important;
+    font-size: 35px !important;
+    top:-45px !important;
+
+}
+
+ #owl-carousel-ul  .owl-nav .owl-next {
+    font-size: 35px !important;
+    color: #000000 !important;
+    position: absolute !important;
+    right: 0% !important;
+    top: 0 !important;
+    transform: none !important;
+    display: block !important;
+    background: none !important;
+    border: none !important;
+    top:-45px !important;
+}
+
+ #owl-carousel-products #owl-carousel-ul .owl-item {
+    width: 100%;
+    border: 0 solid #c5c5c5;
+}
+
+ #owl-carousel-products #owl-carousel-ul {
+    display: block;
+    padding: 0 3.5%;
+}
+
+ #owl-carousel-products #owl-carousel-ul #featuredProducts {
+    margin: 5px 0.8% 0 0;
+    max-width: 100%;
+}
+
+ #owl-carousel-products #owl-carousel-ul #featuredProducts .productListing {
+    margin: 0 0 0 0;
+    width: 100% !important;
+    max-width: 100%;
+    border: none;
+}
+
+ #owl-carousel-ul .owl-carousel .owl-nav {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+
+ #owl-carousel-ul .owl-carousel .owl-nav.disabled, #owl-carousel-ul .owl-carousel .owl-dots.disabled{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+
+ #owl-carousel-products #owl-carousel-ul #featuredProducts .productListing .image span {
+    width: 100% !important; 
+    text-align: center;
+}
+
+ #owl-carousel-products #owl-carousel-ul #featuredProducts .productListing .image span span {
+    width: 100%; 
+}
+
+ #owl-carousel-products #owl-carousel-ul #featuredProducts .productListing .image img {
+    height: 200px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100% !important;
+}
+
+
+ #owl-carousel-products #owl-carousel-ul #featuredProducts .hp-featured-overlay {
+    width: 100%;
+    height: 100%;
+    float: none;
+    position: absolute;
+    top: 0;
+    display: none;
+    left: 0;
+}
+
+ #owl-carousel-products #owl-carousel-ul #featuredProducts .hp-featured-overlay button {
+    background: #c5c5c5;
+    width: 130px;
+    height: 35px;
+    float: none;
+    border: 0px;
+    border-radius: 5px;
+    color: #000;
+    text-align: center;
+    font-family: "Montserrat-Regular";
+    text-transform: capitalize;
+    font-size: 0.87rem;
+    line-height: 34px;
+    display: block;
+    margin: 69% auto 0;
+    text-decoration: none;
+    z-index: 3;
+    position: relative;
+}
+
+ #owl-carousel-products #owl-carousel-ul #featuredProducts .productListing:hover .hp-featured-overlay {
+    display: block;
+}
+
+@media(max-width:1320px) {
+       .product-container {
+        padding: 0 15px;
+    }
+}
+
+ #owl-carousel-products #owl-carousel-ul #featuredProducts .hp-featured-overlay button {
+    max-width: 90%;
+}
+
+
+#featuredProducts .productListing .image img {
+    max-width: 100%;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+#featuredProducts .productListing a.product {
+    z-index: 2 !important;
+    position: relative;
+}
+
+#featuredProducts .productListing span {
+    padding: 0;
+    float: left;
+    width: 100%;
+    font-size: 0.75rem;
+    color: #000000;
+    font-family: 'Mulish';
+}
+
+#featuredProducts .productListing .brand {
+    height: 40px;
+    overflow: hidden;
+    margin: 10px 0 0 0;
+    padding: 0 0 0 5px;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #172026;
+    font-family: "Mulish";
+    width: 100%;
+}
+
+#featuredProducts .productListing .name {
+    overflow: hidden;
+    padding: 0 5px 0 5px;
+    font-weight: normal;
+    text-transform: capitalize;
+    height: 30px;
+    font-size: 14px;
+    color: #172026;
+    font-family: "Mulish";
+    line-height: normal;
+}
+
+#featuredProducts .productListing .image img {
+    max-width: 100%;
+}
+
+/****************************************** End Featured Products*************************************/

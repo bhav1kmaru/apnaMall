@@ -1,0 +1,17 @@
+.small_slider_items{
+    border-radius: 50%;
+    cursor: pointer;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    height: 100px;
+    width: 50px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.small_slider_items:hover{
+    
+}
+
+/* .home_background{
+    background-image: url(https://www.paisleystudios.com.au/wp-content/uploads/2016/04/background-banner1.jpg);
+} */
