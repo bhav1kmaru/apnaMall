@@ -14,11 +14,11 @@ import {
 const Footer = () => {
   return (
     <div>
-      <h2 style={{ marginLeft: '2%' }}>
+      <h5 style={{ marginLeft: '1%' }}>
         {' '}
         From Electronics, Fashion to Cars: Buy Everything Online from the
         Convenence of Your Home from Paytm Mall
-      </h2>
+      </h5>
       <TableContainer>
         <Table variant="simple">
           <TableCaption>Imperial to metric conversion factors</TableCaption>

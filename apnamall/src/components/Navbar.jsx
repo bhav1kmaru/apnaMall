@@ -7,7 +7,7 @@ import { Button } from '@chakra-ui/react'
 const Navbar = () => {
   return (
     <div className={styles.red}>
-      <div>
+      <div className="logo">
         <Image src="/th.jpg" alt="broken" width="80" height="80"></Image>
       </div>
       <div>
@@ -33,6 +33,11 @@ const Navbar = () => {
       <div>
         <Button colorScheme="teal" variant="outline">
           Log In/Sign Up
+        </Button>
+      </div>
+      <div>
+        <Button colorScheme="teal" variant="outline">
+          Team Info
         </Button>
       </div>
     </div>
