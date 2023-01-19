@@ -18,67 +18,46 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 // This is for React JS, Remove this for Next.js
 // import OwlCarousel from 'react-owl-carousel';
 
-const Slider = ({ DataArray }) => {
+const NoSlider = ({ DataArray }) => {
     const options = {
         margin: 30,
         responsiveClass: true,
-        nav: true,
-        dots: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-        autoplayTimeout: 3000,
-        navSpeed: 300,
-        dotsSpeed: 500,
-        slideBy: 3,
-        smartSpeed: 500,
-        navClass: ["owl-prev", "owl-next"],
+        nav: false,
+        loop: false,
+        rewind: false,
+        // autoplay: false,
+        // navSpeed: 300,
+        // slideBy: 3,
+        // smartSpeed: 500,
+        navClass: [],
         navText: [
-            '<i class="fas fa-angle-left"></i>',
-            '<i class="fas fa-angle-right"></i>',
+            // '<i class="fas fa-angle-left"></i>',
+            // '<i class="fas fa-angle-right"></i>',
         ],
         responsive: {
             0: {
                 items: 1,
             },
-            100: {
+            200: {
                 items: 1,
             },
-            200: {
-                items: 2.3,
+            400: {
+                items: 2,
             },
-            360: {
+            600: {
                 items: 3,
             },
-
-            400: {
-                items: 3.3,
+            800: {
+                items: 3,
             },
-            500: {
+            1000: {
                 items: 4,
             },
-
-            600: {
-                items: 6,
-            },
-
-            800: {
-                items: 6.5,
-            },
-            900: {
-                items: 7,
-            },
-
-            1000: {
-                items: 8,
-            },
-            1100: {
-                items: 10,
-            },
-        },
-    };
-    // style = {{ backgroundColor: "none" }}
+        }
+    }
     return (
-        <div>
+        <div className={styles.NoSlider_cmn_div}>
+            <h1 className={styles.h1_title} > Jewellery Brands</h1>
             <div
                 id="owl-carousel-products" className="owl-carousel owl-loaded owl-drag"
             >
@@ -87,7 +66,7 @@ const Slider = ({ DataArray }) => {
                         className="owl-theme"
                         loop
                         margin={0}
-                        nav={true}
+                        nav={false}
                         navText={[
                             '<img src="/images/Arrow_left.png" />',
                             '<img src="/images/Arrow_right.png" />',
@@ -106,7 +85,7 @@ const Slider = ({ DataArray }) => {
                                         <div className={styles.round_image_cr}>
 
                                             <span >
-                                                <img className={styles.small_slider_items}
+                                                <img
                                                     id={"img" + Date.now()}
                                                     src={product.image}
                                                     alt={product.text}
@@ -115,9 +94,13 @@ const Slider = ({ DataArray }) => {
                                                 // height={10}
                                                 ></img>
                                             </span>
-                                            <p className={styles.title_text}>
-                                                {product.text}
-                                            </p>
+                                            <span>
+                                                <p className={styles.title_text1}>
+                                                    {product.text}
+                                                </p>
+
+                                            </span>
+
                                         </div>
                                     </div>
                                 );
@@ -129,4 +112,4 @@ const Slider = ({ DataArray }) => {
         </div>
     )
 };
-export default Slider;
+export default NoSlider;
