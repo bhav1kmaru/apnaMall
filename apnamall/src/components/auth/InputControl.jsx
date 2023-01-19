@@ -8,10 +8,10 @@ const InputControl = (props) => {
   const handleClick = () => setShow(!show);
 
   return (
-    <Box w="70%">
+    <Box w="70%" fontSize={{ base: "18px", sm: "18px", md: "16px" }}>
       <Text mb="8px">{label}</Text>
       <Input
-        fontSize="16px"
+        fontSize={{ base: "18px", sm: "18px", md: "16px" }}
         name={name}
         value={value}
         onChange={(e) => handleChange(name, e.target.value)}

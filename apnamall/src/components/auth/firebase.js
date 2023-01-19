@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 // import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
@@ -15,5 +15,22 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Email/Password - Auth
 export const auth = getAuth();
 // const analytics = getAnalytics(app);
+
+// Google - Auth
+const googleAuthProvider = new GoogleAuthProvider();
+
+export const signInWithGoogleAccount = (authType) => {
+  signInWithPopup(auth, googleAuthProvider)
+    .then((res) => {
+      console.log(res); // res is user info which can be used show user info in app
+      alert(`${res.user.displayName} ${authType} succesfull`);
+    })
+    .catch((err) => {
+      console.log("Error:", err);
+      alert(err.message);
+    });
+};
