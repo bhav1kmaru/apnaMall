@@ -31,7 +31,7 @@ function Draw() {
       <Button variant="outline" colorScheme="blue" onClick={onOpen}>
         Shop By Category
       </Button>
-      <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
+      <Drawer mt="100" placement={placement} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>

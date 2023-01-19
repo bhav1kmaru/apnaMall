@@ -15,9 +15,7 @@
   align-items: center;
   justify-content: center;
 }
-.red > div {
-  width: 13%;
-}
+
 .red > div > button {
   width: 100%;
   word-wrap: break-word;
@@ -27,6 +25,12 @@
   width: 100%;
   height: 40px;
   border-radius: 5px;
+}
+.mall {
+  width: 45%;
+}
+.search::placeholder {
+  text-align: center;
 }
 @media screen and (min-width: 10px) and (max-width: 600px) {
   .red {
@@ -59,8 +63,5 @@
 @media screen and (min-width: 481px) and (max-width: 970px) {
   .red > div > button {
     font-size: 12px;
-  }
-  .red > div {
-    width: 30%;
   }
 }
