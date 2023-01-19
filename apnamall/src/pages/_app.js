@@ -1,6 +1,5 @@
 
 
-import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import "../styles/slider_main.css";
 import Footer from '@/components/Footer'
