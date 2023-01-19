@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   Drawer,
   DrawerBody,
@@ -12,11 +12,11 @@ import {
   Radio,
   Button,
   useDisclosure,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react";
 
 function Draw() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const [placement, setPlacement] = React.useState('left')
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [placement, setPlacement] = React.useState("left");
 
   return (
     <>
@@ -31,7 +31,7 @@ function Draw() {
       <Button variant="outline" colorScheme="blue" onClick={onOpen}>
         Shop By Category
       </Button>
-      <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
+      <Drawer mt="100" placement={placement} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
@@ -43,7 +43,7 @@ function Draw() {
         </DrawerContent>
       </Drawer>
     </>
-  )
+  );
 }
 
-export default Draw
+export default Draw;

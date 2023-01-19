@@ -1,111 +1,132 @@
 /****************************************** Start Featured Products*************************************/
-  #owl-carousel-products {
+#owl-carousel-products {
     height: auto;
     padding-top: 25px;
 }
 
-  #owl-carousel-products .heading {
+#owl-carousel-products .heading {
     color: #172026;
     font-size: 48px;
     text-transform: capitalize;
-    font-family: 'Source Serif Pro';
+    font-family: "Source Serif Pro";
     text-align: center;
     margin-bottom: 0;
 }
 
-   #owl-carousel-products #owl-carousel-ul {
+#owl-carousel-products #owl-carousel-ul {
     float: left;
     padding: 0;
     max-width: 100%;
     margin: 15px auto;
 }
 
-   #owl-carousel-products #owl-carousel-ul .owl-stage-outer {
+#owl-carousel-products #owl-carousel-ul .owl-stage-outer {
     max-width: 100% !important;
     margin: 0 auto;
 }
 
-  #owl-carousel-ul  .owl-nav .owl-prev {
+#owl-carousel-ul .owl-nav .owl-prev {
     color: #000000 !important;
     position: absolute !important;
-    left: -20px !important;
+    left: -35px !important;
     top: 0 !important;
     transform: none !important;
     display: block !important;
-    background: none !important;
+    /* background: none !important; */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
     border: none !important;
-    font-size: 35px !important;
-    top:-45px !important;
-
+    font-size: 30px !important;
+    font-weight: lighter;
+    top: -40px !important;
 }
 
- #owl-carousel-ul  .owl-nav .owl-next {
-    font-size: 35px !important;
+#owl-carousel-ul:hover .owl-nav:hover .owl-prev:hover {
+    background-color: rgba(242, 247, 247, 0.7);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#owl-carousel-ul .owl-nav .owl-next {
+    font-size: 30px !important;
+    font-weight: lighter;
     color: #000000 !important;
     position: absolute !important;
-    right: 0% !important;
+    right: -35px !important;
     top: 0 !important;
     transform: none !important;
     display: block !important;
-    background: none !important;
+    /* background: none !important; */
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     border: none !important;
-    top:-45px !important;
+    top: -45px !important;
 }
 
- #owl-carousel-products #owl-carousel-ul .owl-item {
+#owl-carousel-ul:hover .owl-nav:hover .owl-next:hover {
+    background-color: rgba(242, 247, 247, 0.7);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#owl-carousel-products #owl-carousel-ul .owl-item {
     width: 100%;
     border: 0 solid #c5c5c5;
 }
 
- #owl-carousel-products #owl-carousel-ul {
+#owl-carousel-products #owl-carousel-ul {
     display: block;
     padding: 0 3.5%;
 }
 
- #owl-carousel-products #owl-carousel-ul #featuredProducts {
+#owl-carousel-products #owl-carousel-ul #featuredProducts {
     margin: 5px 0.8% 0 0;
     max-width: 100%;
 }
 
- #owl-carousel-products #owl-carousel-ul #featuredProducts .productListing {
+#owl-carousel-products #owl-carousel-ul #featuredProducts .productListing {
     margin: 0 0 0 0;
     width: 100% !important;
     max-width: 100%;
     border: none;
 }
 
- #owl-carousel-ul .owl-carousel .owl-nav {
+#owl-carousel-ul .owl-carousel .owl-nav {
     display: block;
     position: absolute;
     width: 100%;
     top: 50%;
 }
 
- #owl-carousel-ul .owl-carousel .owl-nav.disabled, #owl-carousel-ul .owl-carousel .owl-dots.disabled{
+#owl-carousel-ul .owl-carousel .owl-nav.disabled,
+#owl-carousel-ul .owl-carousel .owl-dots.disabled {
     display: block;
     position: absolute;
     width: 100%;
     top: 50%;
 }
 
- #owl-carousel-products #owl-carousel-ul #featuredProducts .productListing .image span {
-    width: 100% !important; 
+#owl-carousel-products #owl-carousel-ul #featuredProducts .productListing .image span {
+    width: 100% !important;
     text-align: center;
 }
 
- #owl-carousel-products #owl-carousel-ul #featuredProducts .productListing .image span span {
-    width: 100%; 
+#owl-carousel-products #owl-carousel-ul #featuredProducts .productListing .image span span {
+    width: 100%;
 }
 
- #owl-carousel-products #owl-carousel-ul #featuredProducts .productListing .image img {
+#owl-carousel-products #owl-carousel-ul #featuredProducts .productListing .image img {
     height: 200px;
     width: 100%;
     margin: 0 auto;
     max-width: 100% !important;
 }
 
-
- #owl-carousel-products #owl-carousel-ul #featuredProducts .hp-featured-overlay {
+#owl-carousel-products #owl-carousel-ul #featuredProducts .hp-featured-overlay {
     width: 100%;
     height: 100%;
     float: none;
@@ -115,8 +136,8 @@
     left: 0;
 }
 
- #owl-carousel-products #owl-carousel-ul #featuredProducts .hp-featured-overlay button {
-    background: #c5c5c5;
+#owl-carousel-products #owl-carousel-ul #featuredProducts .hp-featured-overlay button {
+    background: #020202;
     width: 130px;
     height: 35px;
     float: none;
@@ -135,20 +156,19 @@
     position: relative;
 }
 
- #owl-carousel-products #owl-carousel-ul #featuredProducts .productListing:hover .hp-featured-overlay {
+#owl-carousel-products #owl-carousel-ul #featuredProducts .productListing:hover .hp-featured-overlay {
     display: block;
 }
 
-@media(max-width:1320px) {
-       .product-container {
+@media (max-width: 1320px) {
+    .product-container {
         padding: 0 15px;
     }
 }
 
- #owl-carousel-products #owl-carousel-ul #featuredProducts .hp-featured-overlay button {
+#owl-carousel-products #owl-carousel-ul #featuredProducts .hp-featured-overlay button {
     max-width: 90%;
 }
-
 
 #featuredProducts .productListing .image img {
     max-width: 100%;
@@ -168,7 +188,7 @@
     width: 100%;
     font-size: 0.75rem;
     color: #000000;
-    font-family: 'Mulish';
+    font-family: "Mulish";
 }
 
 #featuredProducts .productListing .brand {

@@ -2,16 +2,16 @@
 
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import "../styles/featuredProducts.css";
+import "../styles/slider_main.css";
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 export default function App({ Component, pageProps }) {
 	return (
 		<>
-			<link
+			{/* <link
 				href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 				rel="stylesheet"
-			/>
+			/> */}
 
 			<link
 				rel="stylesheet"
@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }) {
 			<ChakraProvider>
       <Navbar />
       <Component {...pageProps} />
-      {/* <Footer /> */}
+      <Footer />
     </ChakraProvider>
 		</>
 	);

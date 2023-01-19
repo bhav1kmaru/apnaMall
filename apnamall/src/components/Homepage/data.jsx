@@ -1,3 +1,34 @@
+export const topFlyer = [
+    {
+        "image": "https://rukminim1.flixcart.com/fk-p-flap/844/140/image/291f71468a6eff71.jpg?q=50",
+
+    },
+    {
+        "image": "https://rukminim1.flixcart.com/fk-p-flap/844/140/image/291f71468a6eff71.jpg?q=50",
+
+    },
+    {
+        "image": "https://images-static.nykaa.com/uploads/1ff95861-12d2-485e-8334-65f4fd7f4746.jpg?tr=w-1200,cm-pad_resize",
+
+    },
+    {
+        "image": "https://rukminim1.flixcart.com/fk-p-flap/50/50/image/483fc2547747864a.jpeg?q=50",
+
+    },
+    {
+        "image": "https://rukminim1.flixcart.com/fk-p-flap/50/50/image/eb77ebff86336b25.jpeg?q=50",
+
+    },
+    {
+        "image": "https://rukminim1.flixcart.com/fk-p-flap/50/50/image/448c152993ceefb3.jpeg?q=50",
+
+    },
+    {
+        "image": "https://rukminim1.flixcart.com/fk-p-flap/50/50/image/11946434f052f86f.jpg?q=50",
+
+    }
+]
+
 export const DataArray1 = [
     {
         "image": "https://assetscdn1.paytm.com/images/catalog/view_item/710342/1620736738312.jpg?imwidth=140&impolicy=hq",
@@ -258,161 +289,52 @@ export const DataArray3 =
         }
     ]
 
+export const GroceryHomeFurnishing = [
+    {
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/498479/1613247367528.png?imwidth=414&impolicy=hq",
+        "text": "Big Bazaar"
+    },
+    {
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/498482/1620737072141.png?imwidth=414&impolicy=hq",
+        "text": "Urban Ladder"
+    },
+    {
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/498480/1620737097910.jpg?imwidth=414&impolicy=hq",
+        "text": "@home"
+    },
+    {
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/498484/1610566898069.jpg?imwidth=414&impolicy=hq",
+        "text": "More"
+    },
+    {
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/498485/1620737113562.png?imwidth=414&impolicy=hq",
+        "text": "Homecenter"
+    },
+    {
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/498490/1610567023040.png?imwidth=414&impolicy=hq",
+        "text": "Prestige"
+    },
+    {
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/498486/1610567208285.png?imwidth=414&impolicy=hq",
+        "text": "Ratnadeep"
+    },
+]
 
-
-let Products = [
+export const Jewellery_Brands = [
     {
-        id: 1,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/711188/1613028659969.png?imwidth=414&impolicy=hq",
+        "text": "Kalyan | Get 20% Cashback"
     },
     {
-        id: 2,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/711194/1620745874093.jpg?imwidth=414&impolicy=hq",
+        "text": "Jewelfeena"
     },
     {
-        id: 3,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/711199/1613028660058.jpg?imwidth=414&impolicy=hq",
+        "text": "Tanishq"
     },
     {
-        id: 4,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/711200/1620745456365.jpg?imwidth=414&impolicy=hq",
+        "text": "Up to 16% Cashback"
     },
-    {
-        id: 5,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 6,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 7,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 8,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 10,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 11,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 12,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 13,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 14,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 15,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 16,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 17,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 18,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 19,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 20,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 21,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 22,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-    {
-        id: 23,
-        name: "Product Number 1",
-        brand: "Brand Name",
-        url: "https://rukminim1.flixcart.com/image/612/612/kg9qbgw0-0/t-shirt/c/0/7/s-shp395402-shapphr-original-imafwjx7tnbqqqhz.jpeg?q=70",
-        price: 100,
-    },
-];
+]

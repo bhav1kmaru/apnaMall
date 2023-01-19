@@ -18,17 +18,15 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 // This is for React JS, Remove this for Next.js
 // import OwlCarousel from 'react-owl-carousel';
 
-const Slider = ({ DataArray }) => {
+const TopSlider = ({ DataArray }) => {
     const options = {
         margin: 30,
         responsiveClass: true,
         nav: true,
-        dots: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-        autoplayTimeout: 3000,
+        loop: false,
+        rewind: false,
+        autoplay: false,
         navSpeed: 300,
-        dotsSpeed: 500,
         slideBy: 3,
         smartSpeed: 500,
         navClass: ["owl-prev", "owl-next"],
@@ -40,45 +38,26 @@ const Slider = ({ DataArray }) => {
             0: {
                 items: 1,
             },
-            100: {
+            200: {
                 items: 1,
             },
-            200: {
-                items: 2.3,
+            400: {
+                items: 2,
             },
-            360: {
+            600: {
                 items: 3,
             },
-
-            400: {
-                items: 3.3,
-            },
-            500: {
-                items: 4,
-            },
-
-            600: {
-                items: 6,
-            },
-
             800: {
-                items: 6.5,
+                items: 3,
             },
-            900: {
-                items: 7,
-            },
-
             1000: {
-                items: 8,
+                items: 1,
             },
-            1100: {
-                items: 10,
-            },
-        },
-    };
+        }
+    }
     // style = {{ backgroundColor: "none" }}
     return (
-        <div>
+        <div >
             <div
                 id="owl-carousel-products" className="owl-carousel owl-loaded owl-drag"
             >
@@ -106,7 +85,7 @@ const Slider = ({ DataArray }) => {
                                         <div className={styles.round_image_cr}>
 
                                             <span >
-                                                <img className={styles.small_slider_items}
+                                                <img
                                                     id={"img" + Date.now()}
                                                     src={product.image}
                                                     alt={product.text}
@@ -115,9 +94,7 @@ const Slider = ({ DataArray }) => {
                                                 // height={10}
                                                 ></img>
                                             </span>
-                                            <p className={styles.title_text}>
-                                                {product.text}
-                                            </p>
+
                                         </div>
                                     </div>
                                 );
@@ -129,4 +106,4 @@ const Slider = ({ DataArray }) => {
         </div>
     )
 };
-export default Slider;
+export default TopSlider;
