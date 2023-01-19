@@ -7,13 +7,13 @@ import { Button } from '@chakra-ui/react'
 const Navbar = () => {
   return (
     <div className={styles.red}>
-      <div className="logo">
+      <div className={styles.logo}>
         <Image src="/th.jpg" alt="broken" width="80" height="80"></Image>
       </div>
       <div>
         <Draw />
       </div>
-      <div style={{ width: '45%' }}>
+      <div className={styles.mall}>
         <input
           className={styles.search}
           placeholder="Search for a Product, Brand or Category"
