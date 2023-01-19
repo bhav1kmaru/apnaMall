@@ -1,0 +1,84 @@
+.small_slider_items {
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: clip;
+    height: 6rem;
+    width: 0.5rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.small_slider_items:hover {}
+
+.home_background {
+    background-image: url(https://www.paisleystudios.com.au/wp-content/uploads/2016/04/background-banner1.jpg);
+}
+
+.round_image_cr {
+    text-align: center;
+}
+
+.round_image_cr:hover {}
+
+.title_text {
+    font-size: 14px;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue,
+        Segoe UI, sans-serif;
+    margin-top: 15px;
+}
+
+.title_text:hover {
+    color: chocolate;
+}
+
+.owl-prev {
+    width: 60px;
+    border-radius: 10px;
+}
+
+.title_text1 {
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue,
+        Segoe UI, sans-serif;
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.h1_title {
+    font-weight: bold;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue, ;
+    text-align: center;
+    font-size: 26px;
+}
+
+.slider1_cmn_div {
+    margin: 40rem 0;
+}
+
+.slider1_cmn_div::before {
+    content: "";
+    position: absolute;
+    left: 46%;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 5px;
+    bottom: 0;
+    width: 100px;
+    height: 5px;
+    background: #EF4E28;
+    border-radius: 2px;
+}
+
+.NoSlider_cmn_div::before {
+    content: "";
+    position: absolute;
+    left: 46%;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 5px;
+    bottom: 0;
+    width: 100px;
+    height: 5px;
+    background: #EF4E28;
+    border-radius: 2px;
+}

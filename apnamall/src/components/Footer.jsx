@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   Table,
   Thead,
@@ -10,15 +10,15 @@ import {
   TableCaption,
   TableContainer,
   Select,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react";
 const Footer = () => {
   return (
     <div>
-      <h2 style={{ marginLeft: '2%' }}>
-        {' '}
+      <h5 style={{ marginLeft: "1%" }}>
+        {" "}
         From Electronics, Fashion to Cars: Buy Everything Online from the
         Convenence of Your Home from Paytm Mall
-      </h2>
+      </h5>
       <TableContainer>
         <Table variant="simple">
           <TableCaption>Imperial to metric conversion factors</TableCaption>
@@ -198,7 +198,7 @@ const Footer = () => {
         </Table>
       </TableContainer>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
