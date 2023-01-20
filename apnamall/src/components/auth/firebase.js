@@ -1,6 +1,11 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  FacebookAuthProvider,
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 // import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
@@ -32,5 +37,26 @@ export const signInWithGoogleAccount = (authType) => {
     .catch((err) => {
       console.log("Error:", err);
       alert(err.message);
+    });
+};
+
+// Facebook - Auth
+const facebookAuthProvider = new FacebookAuthProvider();
+export const signInWithFacebookAccount = (authType) => {
+  signInWithPopup(auth, facebookAuthProvider)
+    .then((res) => {
+      console.log(res.user);
+      alert(`${res.user.displayName} ${authType} succesfull`);
+    })
+    .catch((err) => {
+      console.log("error in facebook auth :", err.message);
+      if (
+        err.message ===
+        "Firebase: Error (auth/account-exists-with-different-credential)."
+      ) {
+        alert("Account already exists, login if this account belongs to you");
+      } else {
+        alert(err.message);
+      }
     });
 };

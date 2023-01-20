@@ -3,7 +3,11 @@ import Head from "next/head";
 import Link from "next/link";
 
 import { signInWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth, signInWithGoogleAccount } from "@/components/auth/firebase";
+import {
+  auth,
+  signInWithFacebookAccount,
+  signInWithGoogleAccount,
+} from "@/components/auth/firebase";
 import InputControl from "@/components/auth/InputControl";
 
 import {
@@ -128,13 +132,14 @@ const Login = () => {
                 boxSize={6}
                 transition="all 0.5s"
                 _hover={{ cursor: "pointer", transform: "scale(1.2)" }}
+                onClick={() => signInWithFacebookAccount("login")}
               />
-              <Icon
+              {/* <Icon
                 as={BsGithub}
                 boxSize={6}
                 transition="all 0.5s"
                 _hover={{ cursor: "pointer", transform: "scale(1.2)" }}
-              />
+              /> */}
             </Flex>
             {/* border line at last */}
             <Box width="100%" height="5px" bgColor="orange"></Box>
