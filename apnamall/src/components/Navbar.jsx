@@ -19,23 +19,23 @@ const Navbar = () => {
           placeholder="Search for a Product, Brand or Category"
         />
       </div>
-      <div>
+      <div className={styles.dis}>
         {' '}
         <Button colorScheme="teal" variant="outline">
           My Orders
         </Button>
       </div>
-      <div>
+      <div className={styles.dis}>
         <Button colorScheme="teal" variant="outline">
           cart
         </Button>
       </div>
-      <div>
+      <div className={styles.dis}>
         <Button colorScheme="teal" variant="outline">
           Log In/Sign Up
         </Button>
       </div>
-      <div>
+      <div className={styles.dis}>
         <Button colorScheme="teal" variant="outline">
           Team Info
         </Button>
