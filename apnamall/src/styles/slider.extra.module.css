@@ -1,84 +1,96 @@
 .small_slider_items {
-    border-radius: 50%;
-    cursor: pointer;
-    overflow: clip;
-    height: 6rem;
-    width: 0.5rem;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+	border-radius: 50%;
+	cursor: pointer;
+	overflow: clip;
+	/* height: 1%;
+    width: 1%; */
+	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+		rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-.small_slider_items:hover {}
+.small_slider_items:hover {
+}
 
 .home_background {
-    background-image: url(https://www.paisleystudios.com.au/wp-content/uploads/2016/04/background-banner1.jpg);
+	background-image: url(https://www.paisleystudios.com.au/wp-content/uploads/2016/04/background-banner1.jpg);
 }
 
 .round_image_cr {
-    text-align: center;
+	text-align: center;
 }
 
-.round_image_cr:hover {}
+.round_image_cr:hover {
+}
 
 .title_text {
-    font-size: 14px;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue,
-        Segoe UI, sans-serif;
-    margin-top: 15px;
+	font-size: 14.5px;
+    font-weight: 500;
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue,
+		Segoe UI, sans-serif;
+	margin-top: 15px;
 }
 
 .title_text:hover {
-    color: chocolate;
+	color: chocolate;
 }
 
 .owl-prev {
-    width: 60px;
-    border-radius: 10px;
+	width: 60px;
+	border-radius: 10px;
 }
 
 .title_text1 {
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue,
-        Segoe UI, sans-serif;
-    margin-top: 15px;
-    font-size: 25px;
-    font-weight: bold;
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue,
+		Segoe UI, sans-serif;
+	margin-top: 15px;
+	font-size: 25px;
+	font-weight: bold;
 }
 
 .h1_title {
-    font-weight: bold;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue, ;
-    text-align: center;
-    font-size: 26px;
+	font-weight: bold;
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue,
+		Segoe UI, sans-serif;
+	text-align: center;
+	font-size: 26px;
 }
-
+.slider_cmn_div > h1 {
+	padding: 22px;
+}
+.slider_cmn_div {
+    margin-bottom: -20px;
+}
 .slider1_cmn_div {
-    margin: 40rem 0;
+	margin: 30rem 0;
 }
 
-.slider1_cmn_div::before {
-    content: "";
-    position: absolute;
-    left: 46%;
-    margin: auto;
-    align-items: center;
-    margin-bottom: 5px;
-    bottom: 0;
-    width: 100px;
-    height: 5px;
-    background: #EF4E28;
-    border-radius: 2px;
+.slider1_cmn_div,
+.slider_cmn_div,
+.NoSlider_cmn_div {
+	position: relative;
 }
 
-.NoSlider_cmn_div::before {
-    content: "";
-    position: absolute;
-    left: 46%;
-    margin: auto;
-    align-items: center;
-    margin-bottom: 5px;
-    bottom: 0;
-    width: 100px;
-    height: 5px;
-    background: #EF4E28;
-    border-radius: 2px;
+.slider1_cmn_div::before,
+.NoSlider_cmn_div::before,
+.slider_cmn_div::before {
+	content: "";
+	position: absolute;
+	left: 46.3%;
+	margin: auto;
+	align-items: center;
+	margin-bottom: 5px;
+	bottom: 0;
+	width: 100px;
+	height: 5px;
+	background: #ef4e28;
+	border-radius: 2px;
+}
+
+.top_slider_main_div{
+margin-top: 50px;
+}
+
+.service_div{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
 }

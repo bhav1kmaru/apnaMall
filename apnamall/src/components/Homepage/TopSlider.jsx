@@ -3,7 +3,8 @@ import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import styles from "../../styles/slider.extra.module.css"
-import Image from "next/image";
+import { Image } from "@chakra-ui/react";
+
 
 var $ = require("jquery");
 if (typeof window !== "undefined") {
@@ -23,12 +24,11 @@ const TopSlider = ({ DataArray }) => {
         margin: 30,
         responsiveClass: true,
         nav: true,
-        loop: false,
-        rewind: false,
-        autoplay: false,
-        navSpeed: 300,
-        slideBy: 3,
-        smartSpeed: 500,
+        autoplay: true,
+        autoplayHoverPause: true,
+        navSpeed: 500,
+        slideBy: 1,
+        smartSpeed: 1000,
         navClass: ["owl-prev", "owl-next"],
         navText: [
             '<i class="fas fa-angle-left"></i>',
@@ -42,13 +42,13 @@ const TopSlider = ({ DataArray }) => {
                 items: 1,
             },
             400: {
-                items: 2,
+                items: 1,
             },
             600: {
-                items: 3,
+                items: 1,
             },
             800: {
-                items: 3,
+                items: 1,
             },
             1000: {
                 items: 1,
@@ -57,7 +57,7 @@ const TopSlider = ({ DataArray }) => {
     }
     // style = {{ backgroundColor: "none" }}
     return (
-        <div >
+        <div className={styles.top_slider_main_div}>
             <div
                 id="owl-carousel-products" className="owl-carousel owl-loaded owl-drag"
             >
@@ -82,17 +82,18 @@ const TopSlider = ({ DataArray }) => {
                                         id="featuredProducts"
                                         key={"img" + Date.now() + Math.random().toString()}
                                     >
-                                        <div className={styles.round_image_cr}>
+                                        <div>
 
                                             <span >
-                                                <img
+                                                <Image
+
                                                     id={"img" + Date.now()}
                                                     src={product.image}
                                                     alt={product.text}
-                                                // title={product.text}
-                                                // width={10}
-                                                // height={10}
-                                                ></img>
+                                                    // title={product.text}
+                                                    width=''
+                                                    height=""
+                                                />
                                             </span>
 
                                         </div>

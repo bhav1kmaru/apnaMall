@@ -44,34 +44,39 @@ const Slider = ({ DataArray }) => {
                 items: 1,
             },
             200: {
-                items: 2.3,
+                items: 2,
             },
-            360: {
+            300: {
                 items: 3,
             },
 
             400: {
-                items: 3.3,
+                items: 4,
             },
             500: {
-                items: 4,
+                items: 5,
             },
 
             600: {
                 items: 6,
             },
-
+            700: {
+                items: 7,
+            },
             800: {
-                items: 6.5,
+                items: 8,
             },
             900: {
-                items: 7,
+                items: 9,
             },
 
             1000: {
-                items: 8,
+                items: 10,
             },
-            1100: {
+            1050: {
+                items: 10,
+            },
+            1200: {
                 items: 10,
             },
         },

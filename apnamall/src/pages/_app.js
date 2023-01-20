@@ -1,9 +1,7 @@
-
-
 import { ChakraProvider } from "@chakra-ui/react";
 import "../styles/slider_main.css";
-import Footer from '@/components/Footer'
-import Navbar from '@/components/Navbar'
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 export default function App({ Component, pageProps }) {
 	return (
 		<>
@@ -19,13 +17,11 @@ export default function App({ Component, pageProps }) {
 			{/* <script
 				src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 				async></script> */}
-
 			<ChakraProvider>
-      <Navbar />
-      <Component {...pageProps} />
-      <Footer />
-    </ChakraProvider>
+				<Navbar />
+				<Component {...pageProps} />
+				<Footer />
+			</ChakraProvider>
 		</>
 	);
-
 }
