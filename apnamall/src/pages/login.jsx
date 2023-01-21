@@ -22,6 +22,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { BsFacebook, BsGithub, BsGoogle } from "react-icons/bs";
+import { useRouter } from "next/router";
 
 const initState = {
   email: "",
@@ -32,6 +33,7 @@ const Login = () => {
   const [formData, setFormData] = useState(initState);
   const [err, setErr] = useState(false);
   const [loading, setLoading] = useState(false);
+  const router=useRouter()
 
   const handleChange = (key, value) => {
     setFormData({ ...formData, [key]: value });
@@ -45,11 +47,18 @@ const Login = () => {
     setLoading(true);
     signInWithEmailAndPassword(auth, formData.email, formData.password)
       .then(async (res) => {
-        await updateProfile(res.user, { displayName: formData.name });
-        // console.log(res.user);
+        await updateProfile(res.user);
+        console.log("data",res.user.user);
         alert("Login sucessfull");
         setErr("");
         setLoading(false);
+         let userInfo = {
+           email: res.user.user.email,
+           image: res.user.user.photoURL,
+         };
+         localStorage.setItem("userInfo", JSON.stringify(userInfo));
+         router.push('/')
+        //  console.log(userInfo);
       })
       .catch((err) => {
         setLoading(false);

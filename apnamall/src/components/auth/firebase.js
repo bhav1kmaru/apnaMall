@@ -5,6 +5,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
+import { useRouter } from "next/router";
 // import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
@@ -30,12 +31,20 @@ const googleAuthProvider = new GoogleAuthProvider();
 export const signInWithGoogleAccount = (authType) => {
   signInWithPopup(auth, googleAuthProvider)
     .then((res) => {
-      console.log(res); // res is user info which can be used show user info in app
+      console.log(res.user.displayName); // res is user info which can be used show user info in app
       alert(`${res.user.displayName} ${authType} succesfull`);
+     let userInfo = {
+       name: res.user.displayName,
+       email: res.user.email,
+       image: res.user.photoURL,
+     };
+     localStorage.setItem("userInfo", JSON.stringify(userInfo));
+     console.log(userInfo);
     })
     .catch((err) => {
       console.log("Error:", err);
       alert(err.message);
+      
     });
 };
 
@@ -44,8 +53,15 @@ const facebookAuthProvider = new FacebookAuthProvider();
 export const signInWithFacebookAccount = (authType) => {
   signInWithPopup(auth, facebookAuthProvider)
     .then((res) => {
-      console.log(res.user);
+      console.log(res.user.user);
       alert(`${res.user.displayName} ${authType} succesfull`);
+       let userInfo = {
+         name: res.user.displayName,
+         email: res.user.email,
+         image: res.user.photoURL,
+       };
+       localStorage.setItem("userInfo", JSON.stringify(userInfo));
+       console.log(userInfo);
     })
     .catch((err) => {
       console.log("error in facebook auth :", err.message);

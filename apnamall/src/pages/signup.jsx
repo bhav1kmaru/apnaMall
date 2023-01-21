@@ -52,10 +52,17 @@ const Signup = () => {
     createUserWithEmailAndPassword(auth, formData.email, formData.password)
       .then(async (res) => {
         await updateProfile(res.user, { displayName: formData.name });
-        // console.log(res.user);
+        console.log(res.user.user);
         alert("signup sucessfull");
         setErr("");
         setLoading(false);
+        // let userInfo = {
+        //   name: res.user.user.displayName,
+        //   email: res.user.user.email,
+        //   image: res.user.user.photoURL,
+        // };
+        // localStorage.setItem("userInfo", JSON.stringify(userInfo));
+        // console.log(userInfo);
       })
       .catch((err) => {
         setLoading(false);
