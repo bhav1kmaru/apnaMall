@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import {
   Drawer,
   DrawerBody,
@@ -12,11 +12,11 @@ import {
   Radio,
   Button,
   useDisclosure,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react'
 
 function Draw() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [placement, setPlacement] = React.useState("left");
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [placement, setPlacement] = React.useState('left')
 
   return (
     <>
@@ -28,7 +28,7 @@ function Draw() {
           <Radio value="left">Left</Radio>
         </Stack> */}
       </RadioGroup>
-      <Button w={"100%"} variant="outline" colorScheme="blue" onClick={onOpen}>
+      <Button w={'100%'} variant="outline" colorScheme="blue" onClick={onOpen}>
         Shop By Category
       </Button>
       <Drawer mt="100" placement={placement} onClose={onClose} isOpen={isOpen}>
@@ -36,14 +36,26 @@ function Draw() {
         <DrawerContent>
           <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
           <DrawerBody>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
+            <p>Jewellwry</p>
+            <p>Fashion</p>
+            <p>Furniture</p>
+            <p>Levis</p>
+            <p>UCB</p>
+            <p>Intertainment</p>
+            <p>Jewellwry</p>
+            <p>Fashion</p>
+            <p>BIBA</p>
+            <p>Jewellwry</p>
+            <p>Clarks</p>
+            <p>Arrow</p>
+            <p>Woodland</p>
+            <p>Fashion</p>
+            <p>Crocs</p>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
     </>
-  );
+  )
 }
 
-export default Draw;
+export default Draw

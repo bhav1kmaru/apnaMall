@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from './Navbar.module.css'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import Link from 'next/link'
 import {
   Drawer,
   DrawerBody,
@@ -43,7 +44,14 @@ const Hamburger = () => {
           <DrawerHeader borderBottomWidth="1px">
             {' '}
             <div style={{ height: '50px' }}>
-              <Image src="/th.jpg" alt="broken" width="80" height="80"></Image>
+              <Link href="/">
+                <Image
+                  src="/th.jpg"
+                  alt="broken"
+                  width="80"
+                  height="80"
+                ></Image>
+              </Link>
             </div>
           </DrawerHeader>
           <DrawerBody>
@@ -64,12 +72,12 @@ const Hamburger = () => {
             </div>
             <div style={{ widht: '100%' }}>
               <Button w={'100%'} colorScheme="blue" variant="outline">
-                cart
+                <Link href="/cart"> Bag</Link>
               </Button>
             </div>
             <div style={{ widht: '100%' }}>
               <Button w={'100%'} colorScheme="blue" variant="outline">
-                Log In/Sign Up
+                <Link href="/login"> Log In/Sign Up</Link>
               </Button>
             </div>
           </DrawerBody>
