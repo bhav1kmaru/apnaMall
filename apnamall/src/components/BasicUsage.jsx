@@ -60,7 +60,7 @@ function BasicUsage() {
               ></Input>
               {!isError ? (
                 <FormHelperText>
-                  Enter the email you'd like to receive the newsletter on.
+                  Enter the email youd like to receive the newsletter on.
                 </FormHelperText>
               ) : (
                 <FormErrorMessage>Email is required.</FormErrorMessage>
@@ -69,7 +69,7 @@ function BasicUsage() {
               <Flex gap={2}>
                 <Select placeholder="-Select State-">
                   {state.map((ele) => {
-                    return <option value="">{ele.name}</option>;
+                    return <option key={ele.name} value="">{ele.name}</option>;
                   })}
                 </Select>
                 <Input placeholder="Pincode"></Input>

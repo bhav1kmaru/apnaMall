@@ -28,7 +28,7 @@ function Draw() {
           <Radio value="left">Left</Radio>
         </Stack> */}
       </RadioGroup>
-      <Button variant="outline" colorScheme="blue" onClick={onOpen}>
+      <Button w={"100%"} variant="outline" colorScheme="blue" onClick={onOpen}>
         Shop By Category
       </Button>
       <Drawer mt="100" placement={placement} onClose={onClose} isOpen={isOpen}>
