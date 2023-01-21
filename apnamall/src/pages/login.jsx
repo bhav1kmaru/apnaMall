@@ -39,6 +39,8 @@ const Login = () => {
     setFormData({ ...formData, [key]: value });
   };
 
+
+
   const handleSubmission = () => {
     if (formData.email === "" || formData.password === "") {
       setErr("All Fields are required");
@@ -47,20 +49,22 @@ const Login = () => {
     setLoading(true);
     signInWithEmailAndPassword(auth, formData.email, formData.password)
       .then(async (res) => {
-        await updateProfile(res.user);
-        console.log("data",res.user.user);
+        // await updateProfile(res.user);
+        console.log("data",res.user);
         alert("Login sucessfull");
         setErr("");
         setLoading(false);
          let userInfo = {
-           email: res.user.user.email,
-           image: res.user.user.photoURL,
+           email: res.user.email,
+           image: res.user.photoURL,
+           name:res.user.displayName
          };
          localStorage.setItem("userInfo", JSON.stringify(userInfo));
-         router.push('/')
+         window.location.href='/'
         //  console.log(userInfo);
       })
       .catch((err) => {
+        console.log(err)
         setLoading(false);
         setErr(err.message);
       });
@@ -123,7 +127,10 @@ const Login = () => {
             </FormControl>
             <Box py="20px">
               <Text fontSize={{ base: "18px", sm: "18px", md: "16px" }}>
-                {"Don't"} have an account ? <Link href="/signup">SignUp</Link>
+                {"Don't"} have an account ? <Link href="/signup">SignUp</Link><br/><br/>
+                <a href="https://apnamalldashboard.netlify.app/">
+                  Login as Admin
+                </a>
               </Text>
             </Box>
 

@@ -24,12 +24,19 @@ import {
 } from "@chakra-ui/react";
 import { BsFacebook, BsGithub, BsGoogle } from "react-icons/bs";
 
+
 const initState = {
   name: "",
   email: "",
   password: "",
 };
-
+const sendData = async (data) => {
+  let r = await fetch(`https://apnamallcart.vercel.app/auth`, {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { "Content-Type": "application/json" },
+  });
+};
 const Signup = () => {
   const [formData, setFormData] = useState(initState);
   const [err, setErr] = useState(false);
@@ -51,20 +58,15 @@ const Signup = () => {
     setLoading(true);
     createUserWithEmailAndPassword(auth, formData.email, formData.password)
       .then(async (res) => {
-        await updateProfile(res.user, { displayName: formData.name });
-        console.log(res.user.user);
+        // await updateProfile(res.user, { displayName: formData.name });
+        console.log(res.user);
         alert("signup sucessfull");
         setErr("");
         setLoading(false);
-        // let userInfo = {
-        //   name: res.user.user.displayName,
-        //   email: res.user.user.email,
-        //   image: res.user.user.photoURL,
-        // };
-        // localStorage.setItem("userInfo", JSON.stringify(userInfo));
-        // console.log(userInfo);
+        // window.location.href='/login'
       })
       .catch((err) => {
+        console.log(err)
         setLoading(false);
         setErr(err.message);
       });

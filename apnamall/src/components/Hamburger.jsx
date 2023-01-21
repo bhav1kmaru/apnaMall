@@ -17,6 +17,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 import Draw from './Drawer'
+import UserDisplayComponent from './UserDisplayComponent'
 const Hamburger = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [placement, setPlacement] = useState('top')
@@ -32,7 +33,10 @@ const Hamburger = () => {
         </Stack> */}
       </RadioGroup>
       <div>
-        <Image src="/th.jpg" alt="broken" width="80" height="80"></Image>
+        <Image src="/apnaLogoFinal.png" alt="broken" width="80" height="80"></Image>
+      </div>
+      <div>
+        <UserDisplayComponent />
       </div>
       <Button colorScheme="blue" onClick={onOpen}>
         <GiHamburgerMenu />
@@ -43,7 +47,7 @@ const Hamburger = () => {
           <DrawerHeader borderBottomWidth="1px">
             {' '}
             <div style={{ height: '50px' }}>
-              <Image src="/th.jpg" alt="broken" width="80" height="80"></Image>
+              <Image src="/apnaLogoFinal.png" alt="broken" width="80" height="80"></Image>
             </div>
           </DrawerHeader>
           <DrawerBody>

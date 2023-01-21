@@ -1,4 +1,4 @@
-import { Box, Flex, Select, SimpleGrid } from '@chakra-ui/react'
+import { Box, Flex, HStack, Select, SimpleGrid, Skeleton } from '@chakra-ui/react'
 import axios from 'axios'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -13,6 +13,7 @@ const Brand = () => {
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(5000);
     const [minDiscount,setMinDiscount]=useState(0)
+    const [loading,setLoading]=useState(false)
     
    
     
@@ -35,6 +36,7 @@ const Brand = () => {
     }
   
     const getData=async()=>{
+      setLoading(true)
         let r = await fetch(`https://apnamallproducts.vercel.app/${brand}`);
         let data=await r.json()
         console.log(data)
@@ -53,13 +55,37 @@ const Brand = () => {
           })
           setData(data3)
           return
+          setLoading(false)
         }
         console.log(data)
         setData(data2)
+        setLoading(false)
     }
     useEffect(()=>{
         getData()
     },[minPrice,maxPrice,minDiscount])
+
+    if(loading){
+      return (
+        <Flex>
+          <Box w="10%">
+            <Filters
+              minDiscountSlider={minDiscountSlider}
+              minDiscount={minDiscount}
+              minPrice={minPrice}
+              maxPrice={maxPrice}
+              maxSlider={maxSlider}
+              minSlider={minSlider}
+            />
+          </Box>
+          <SimpleGrid m="auto" columns={[1, 2, null, 3]} gap="10px" mt="100px">
+            <Skeleton height="400px" width="300px" />
+            <Skeleton height="400px" width="300px" />
+            <Skeleton height="400px" width="300px" />
+          </SimpleGrid>
+        </Flex>
+      );
+    }
   return (
     <>
       <Flex>
@@ -75,7 +101,7 @@ const Brand = () => {
         </Box>
         <SimpleGrid m="auto" columns={[1, 2, null, 3]} gap="10px" mt="50px">
           {data.map((el) => (
-            <Link key={el.id} href={`/products/${el.id}`}>
+           
               <ProductsCard
                 addToCart={addToCart}
                 key={el.id}
@@ -87,8 +113,9 @@ const Brand = () => {
                 striked_price={el.striked_price}
                 discount={el.discount}
                 totalRatings={el.totalratings}
+                id={el.id}
               />
-            </Link>
+           
           ))}
         </SimpleGrid>
       </Flex>

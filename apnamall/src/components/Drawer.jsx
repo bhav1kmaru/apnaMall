@@ -13,6 +13,7 @@ import {
   Button,
   useDisclosure,
 } from "@chakra-ui/react";
+import { GiClothes } from "react-icons/gi";
 
 function Draw() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -28,8 +29,8 @@ function Draw() {
           <Radio value="left">Left</Radio>
         </Stack> */}
       </RadioGroup>
-      <Button w={"100%"} variant="outline" colorScheme="blue" onClick={onOpen}>
-        Shop By Category
+      <Button w={"100%"} variant="outline" colorScheme="blue" onClick={onOpen} style={{display:"flex",gap:"10px"}}>
+       <GiClothes /> Shop By Category
       </Button>
       <Drawer mt="100" placement={placement} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />

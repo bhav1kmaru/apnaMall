@@ -1,3 +1,4 @@
+import { useConst } from "@chakra-ui/react";
 import { initializeApp } from "firebase/app";
 import {
   FacebookAuthProvider,
@@ -6,6 +7,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { useRouter } from "next/router";
+import { useContext } from "react";
 // import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
@@ -28,18 +30,23 @@ export const auth = getAuth();
 // Google - Auth
 const googleAuthProvider = new GoogleAuthProvider();
 
+
 export const signInWithGoogleAccount = (authType) => {
   signInWithPopup(auth, googleAuthProvider)
     .then((res) => {
       console.log(res.user.displayName); // res is user info which can be used show user info in app
       alert(`${res.user.displayName} ${authType} succesfull`);
+      window.location.href='/';
      let userInfo = {
        name: res.user.displayName,
        email: res.user.email,
        image: res.user.photoURL,
+       id:1
      };
      localStorage.setItem("userInfo", JSON.stringify(userInfo));
      console.log(userInfo);
+  
+     
     })
     .catch((err) => {
       console.log("Error:", err);

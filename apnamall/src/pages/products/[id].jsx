@@ -18,7 +18,9 @@ import {
   Icon,
   RadioGroup,
   Radio,
-  HStack
+  HStack,
+  SkeletonCircle,
+  SkeletonText
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -61,13 +63,16 @@ export default function ProductPage() {
     const [product,setProduct]=useState({})
     const router=useRouter()
     const [size,setSize]=useState("M")
+    const [loading,setLoading]=useState(false)
     const {query:{
         id
     }}=router
     const getData=async()=>{
+      
         let r = await fetch(`https://apnamallproducts.vercel.app/allproducts/${id}`);
         let data = await r.json()
         setProduct(data)
+       
     }
      const addToCart = async (data) => {
        let r = await fetch(`https://apnamallcart.vercel.app/cart`, {
@@ -80,6 +85,15 @@ export default function ProductPage() {
     useEffect(()=>{
         getData()
     },[product])
+
+    if(loading){
+      return (
+        <Box padding="6" boxShadow="lg" bg="white">
+          <SkeletonCircle size="10" />
+          <SkeletonText mt="4" noOfLines={4} spacing="4" skeletonHeight="2" />
+        </Box>
+      );
+    }
   return (
     <Container maxW={"7xl"}>
       <SimpleGrid

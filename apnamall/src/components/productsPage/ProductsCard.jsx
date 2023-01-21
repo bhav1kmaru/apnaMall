@@ -12,7 +12,9 @@ import {
   VStack,
   Button,
 } from "@chakra-ui/react";
-import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
+import Link from "next/link";
+import { useState } from "react";
+import { BsBag, BsFillBagFill, BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
 
 const data = {
@@ -55,7 +57,9 @@ function Rating({ rating, numReviews }) {
   );
 }
 
-function ProductsCard({title,image,brand,price,striked_price,rating,discount,totalRatings,addToCart,key}) {
+function ProductsCard({title,image,brand,price,striked_price,rating,discount,totalRatings,addToCart,key,id}) {
+
+  const [added,setAdded]=useState(false)
   return (
     <Flex p={50} w="full" alignItems="center" justifyContent="center">
       <Box
@@ -74,7 +78,9 @@ function ProductsCard({title,image,brand,price,striked_price,rating,discount,tot
           bg="red.200"
         />
 
-        <Image src={image} alt={`Picture of ${title}`} roundedTop="lg" />
+        <Link href={`/products/${id}`}>
+          <Image src={image} alt={`Picture of ${title}`} roundedTop="lg" />
+        </Link>
 
         <VStack w="100%">
           <Box>
@@ -103,8 +109,12 @@ function ProductsCard({title,image,brand,price,striked_price,rating,discount,tot
             </Text>
             <Text color="red">{discount}</Text>
           </Flex>
+
           <Flex
-          onClick={()=>addToCart({image,title,price})}
+            onClick={() => {
+              addToCart({ image, title, price });
+              setAdded(true);
+            }}
             p="10px"
             w="100%"
             justifyContent="center"
@@ -117,57 +127,10 @@ function ProductsCard({title,image,brand,price,striked_price,rating,discount,tot
               color: "black",
             }}
           >
-            <Icon as={FiShoppingCart} h={7} w={7} alignSelf={"center"} />
-            <Text fontSize="lg">Add to cart</Text>
+            <Icon as={BsBag} h={7} w={7} alignSelf={"center"} />
+            <Text fontSize="lg">{added ? "Added" : "Add to Bag"}</Text>
           </Flex>
         </VStack>
-
-        {/* <Box p="6">
-          <Box d="flex" alignItems="baseline">
-            <Badge rounded="full" px="2" fontSize="0.8em" colorScheme="red">
-              {brand}
-            </Badge>
-          </Box>
-          <Flex mt="1" justifyContent="space-between" alignContent="center">
-            <Box
-              fontSize="2xl"
-              fontWeight="semibold"
-              as="h4"
-              lineHeight="tight"
-              isTruncated
-            >
-              {title}
-            </Box>
-            <Box>
-              <Tooltip
-                label="Add to cart"
-                bg="white"
-                placement={"top"}
-                color={"gray.800"}
-                fontSize={"1.2em"}
-              >
-                <chakra.a href={"#"} display={"flex"}>
-                  <Icon as={FiShoppingCart} h={7} w={7} alignSelf={"center"} />
-                </chakra.a>
-              </Tooltip>
-            </Box>
-          </Flex>
-
-          <Flex justifyContent="space-between" alignContent="center">
-            <Rating rating={rating} numReviews={data.numReviews} />
-            <Box fontSize="2xl" color={useColorModeValue("gray.800", "white")}>
-              <Box as="span" color={"gray.600"} fontSize="lg">
-                ₹
-              </Box>
-              {price}
-              <br />
-              <Text color="red" as="del">
-                ₹{striked_price}
-              </Text>
-              <br />
-            </Box>
-          </Flex>
-        </Box> */}
       </Box>
     </Flex>
   );

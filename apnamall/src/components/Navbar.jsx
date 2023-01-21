@@ -5,47 +5,63 @@ import styles from './Navbar.module.css'
 import { Button } from '@chakra-ui/react'
 import Hamburger from './Hamburger'
 import Link from 'next/link'
+import UserDisplayComponent from './UserDisplayComponent'
+import { BsBag } from 'react-icons/bs'
+import { MdNotes } from 'react-icons/md'
+import { FaSearch } from 'react-icons/fa'
+
 
 const Navbar = () => {
   return (
     <div>
-      <div style={{ paddingRight: '10%' }} className={styles.invisible}>
+      <div style={{ paddingRight: "10%" }} className={styles.invisible}>
         <Hamburger />
       </div>
       <div className={styles.red}>
         <div className={styles.logo}>
           <Link href="/">
-            <Image src="/th.jpg" alt="broken" width="80" height="80"></Image>
+            <Image
+              src="/apnaLogoFinal.png"
+              alt="broken"
+              width="140"
+              height="140"
+              style={{ margin: "10px" }}
+            ></Image>
           </Link>
         </div>
         <div>
           <Draw />
         </div>
         <div className={styles.mall}>
-          <input
-            className={styles.search}
-            placeholder="Search for a Product, Brand or Category"
-          />
+          <input className={styles.search} placeholder="Search for a Product,Brand or Category" />
         </div>
         <div>
-          {' '}
+          {" "}
           <Button colorScheme="blue" variant="outline">
-            My Orders
+            <MdNotes /> My Orders
           </Button>
         </div>
         <div>
           <Button colorScheme="blue" variant="outline">
-            <Link href="/cart"> Bag</Link>
+            <Link
+              href="/cart"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                textAlign: "center",
+              }}
+            >
+              <BsBag /> Bag
+            </Link>
           </Button>
         </div>
         <div>
-          <Button colorScheme="blue" variant="outline">
-            <Link href="/login"> Log In/Sign Up</Link>
-          </Button>
+          <UserDisplayComponent />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Navbar
