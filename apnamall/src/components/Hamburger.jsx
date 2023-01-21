@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import styles from "./Navbar.module.css";
-import { GiHamburgerMenu } from "react-icons/gi";
+import React, { useState } from 'react'
+import Image from 'next/image'
+import styles from './Navbar.module.css'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import {
   Drawer,
   DrawerBody,
@@ -15,11 +15,11 @@ import {
   Radio,
   Button,
   useDisclosure,
-} from "@chakra-ui/react";
-import Draw from "./Drawer";
+} from '@chakra-ui/react'
+import Draw from './Drawer'
 const Hamburger = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [placement, setPlacement] = useState("top");
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [placement, setPlacement] = useState('top')
 
   return (
     <>
@@ -41,47 +41,42 @@ const Hamburger = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader borderBottomWidth="1px">
-            {" "}
-            <div style={{ height: "50px" }}>
+            {' '}
+            <div style={{ height: '50px' }}>
               <Image src="/th.jpg" alt="broken" width="80" height="80"></Image>
             </div>
           </DrawerHeader>
           <DrawerBody>
-            <div style={{ widht: "100%" }}>
+            <div style={{ widht: '100%' }}>
               <Draw />
             </div>
-            <div style={{ widht: "100%" }}>
+            <div style={{ widht: '100%' }}>
               <input
                 className={styles.search}
                 placeholder="Search for a Product, Brand or Category"
               />
             </div>
-            <div style={{ widht: "100%" }}>
-              {" "}
-              <Button w={"100%"} colorScheme="teal" variant="outline">
+            <div style={{ widht: '100%' }}>
+              {' '}
+              <Button w={'100%'} colorScheme="blue" variant="outline">
                 My Orders
               </Button>
             </div>
-            <div style={{ widht: "100%" }}>
-              <Button w={"100%"} colorScheme="teal" variant="outline">
+            <div style={{ widht: '100%' }}>
+              <Button w={'100%'} colorScheme="blue" variant="outline">
                 cart
               </Button>
             </div>
-            <div style={{ widht: "100%" }}>
-              <Button w={"100%"} colorScheme="teal" variant="outline">
+            <div style={{ widht: '100%' }}>
+              <Button w={'100%'} colorScheme="blue" variant="outline">
                 Log In/Sign Up
-              </Button>
-            </div>
-            <div style={{ widht: "100%" }}>
-              <Button w={"100%"} colorScheme="teal" variant="outline">
-                Team Info
               </Button>
             </div>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
     </>
-  );
-};
+  )
+}
 
-export default Hamburger;
+export default Hamburger

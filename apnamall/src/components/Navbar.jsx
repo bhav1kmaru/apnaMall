@@ -1,19 +1,22 @@
-import Image from "next/image";
-import React from "react";
-import Draw from "./Drawer";
-import styles from "./Navbar.module.css";
-import { Button } from "@chakra-ui/react";
-import Hamburger from "./Hamburger";
+import Image from 'next/image'
+import React from 'react'
+import Draw from './Drawer'
+import styles from './Navbar.module.css'
+import { Button } from '@chakra-ui/react'
+import Hamburger from './Hamburger'
+import Link from 'next/link'
 
 const Navbar = () => {
   return (
     <div>
-      <div style={{ paddingRight: "10%" }} className={styles.invisible}>
+      <div style={{ paddingRight: '10%' }} className={styles.invisible}>
         <Hamburger />
       </div>
       <div className={styles.red}>
         <div className={styles.logo}>
-          <Image src="/th.jpg" alt="broken" width="80" height="80"></Image>
+          <Link href="/">
+            <Image src="/th.jpg" alt="broken" width="80" height="80"></Image>
+          </Link>
         </div>
         <div>
           <Draw />
@@ -25,29 +28,24 @@ const Navbar = () => {
           />
         </div>
         <div>
-          {" "}
-          <Button colorScheme="teal" variant="outline">
+          {' '}
+          <Button colorScheme="blue" variant="outline">
             My Orders
           </Button>
         </div>
         <div>
-          <Button colorScheme="teal" variant="outline">
-            Cart
+          <Button colorScheme="blue" variant="outline">
+            <Link href="/cart"> Bag</Link>
           </Button>
         </div>
         <div>
-          <Button colorScheme="teal" variant="outline">
-            Log In/Sign Up
-          </Button>
-        </div>
-        <div>
-          <Button colorScheme="teal" variant="outline">
-            Team Info
+          <Button colorScheme="blue" variant="outline">
+            <Link href="/login"> Log In/Sign Up</Link>
           </Button>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
