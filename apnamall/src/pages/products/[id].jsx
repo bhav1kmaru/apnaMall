@@ -28,7 +28,7 @@ import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { MdLocalShipping } from "react-icons/md";
 import { FiShoppingCart } from "react-icons/fi";
 import Reviews from "../../components/productsPage/Reviews";
-import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
+import { BsBag, BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import Link from "next/link";
 
 function Rating({ rating, numReviews }) {
@@ -122,7 +122,7 @@ export default function ProductPage() {
               {product.brand} {product.title}
             </Heading>
             <Text
-              color={useColorModeValue("gray.900", "gray.400")}
+              color='black'
               fontWeight={300}
               fontSize={"2xl"}
             >
@@ -145,13 +145,13 @@ export default function ProductPage() {
             direction={"column"}
             divider={
               <StackDivider
-                borderColor={useColorModeValue("gray.200", "gray.600")}
+                borderColor='black'
               />
             }
           >
             <VStack spacing={{ base: 4, sm: 6 }}>
               <Text
-                color={useColorModeValue("gray.500", "gray.400")}
+                color='black'
                 fontSize={"2xl"}
                 fontWeight={"300"}
               >
@@ -189,17 +189,19 @@ export default function ProductPage() {
                 mt={8}
                 size={"lg"}
                 py={"7"}
-                bg={useColorModeValue("gray.900", "gray.50")}
-                color={useColorModeValue("white", "gray.900")}
+                bg='black'
+                color='white'
                 backgroundColor="orange"
                 textTransform={"uppercase"}
+                display='flex'
+                gap='10px'
                 _hover={{
                   transform: "translateY(2px)",
                   boxShadow: "lg",
                 }}
               >
-                <Icon as={FiShoppingCart} h={7} w={7} alignSelf={"center"} />{" "}
-                Add to cart
+                <Icon as={BsBag} h={7} w={7} alignSelf={"center"} />{" "}
+                Add to Bag
               </Button>
               <Stack
                 direction="row"
