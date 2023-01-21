@@ -47,32 +47,32 @@ const Hamburger = () => {
             </div>
           </DrawerHeader>
           <DrawerBody>
-            <div style={{ widht: '100%' }}>
+            <div style={{ width: '100%' }}>
               <Draw />
             </div>
-            <div style={{ widht: '100%' }}>
+            <div style={{ width: '100%' }}>
               <input
                 className={styles.search}
                 placeholder="Search for a Product, Brand or Category"
               />
             </div>
-            <div style={{ widht: '100%' }}>
+            <div style={{ width: '100%' }}>
               {' '}
               <Button w={'100%'} colorScheme="teal" variant="outline">
                 My Orders
               </Button>
             </div>
-            <div style={{ widht: '100%' }}>
+            <div style={{ width: '100%' }}>
               <Button w={'100%'} colorScheme="teal" variant="outline">
                 cart
               </Button>
             </div>
-            <div style={{ widht: '100%' }}>
+            <div style={{ width: '100%' }}>
               <Button w={'100%'} colorScheme="teal" variant="outline">
                 Log In/Sign Up
               </Button>
             </div>
-            <div style={{ widht: '100%' }}>
+            <div style={{ width: '100%' }}>
               <Button w={'100%'} colorScheme="teal" variant="outline">
                 Team Info
               </Button>
