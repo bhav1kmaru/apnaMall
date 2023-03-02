@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Draw from './Drawer'
 import styles from './Navbar.module.css'
 import { Button } from '@chakra-ui/react'
@@ -10,14 +10,15 @@ import { BsBag } from 'react-icons/bs'
 import { MdNotes } from 'react-icons/md'
 import { FaSearch } from 'react-icons/fa'
 import axios from 'axios'
+import { CartContext } from '../contexts/CartContext'
 
 
 const Navbar = () => {
-  const [cartLength,setCartLength]=useState(0)
+  const {cartLength}=useContext(CartContext)
  
   useEffect(()=>{
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCartLength(cart.length)
+    
   })
   return (
     <div>
@@ -40,16 +41,19 @@ const Navbar = () => {
           <Draw />
         </div>
         <div className={styles.mall}>
-          <input className={styles.search} placeholder="Search for a Product,Brand or Category" />
+          <input
+            className={styles.search}
+            placeholder="Search for a Product,Brand or Category"
+          />
         </div>
         <div>
           {" "}
-          <Button colorScheme="blue" variant="outline">
+          <Button size="sm" colorScheme="blue" variant="outline">
             <MdNotes /> My Orders
           </Button>
         </div>
         <div>
-          <Button colorScheme="blue" variant="outline">
+          <Button colorScheme="blue" size="sm" variant="outline">
             <Link
               href="/cart"
               style={{
@@ -59,7 +63,7 @@ const Navbar = () => {
                 textAlign: "center",
               }}
             >
-              <BsBag /> Bag ({(cartLength)})
+              <BsBag /> Bag ({cartLength})
             </Link>
           </Button>
         </div>

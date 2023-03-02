@@ -8,13 +8,17 @@ import Success from "./Success";
 export default function PaymentModal() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [step,setStep]=useState(0)
+  
   return (
     <>
       <Button bgColor="#dd6b20" color="white" onClick={onOpen}>
         Place Order
       </Button>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={()=>{
+        localStorage.removeItem('cart')
+        onClose()
+        }}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Place Your Order</ModalHeader>
@@ -22,9 +26,9 @@ export default function PaymentModal() {
           <ModalBody>
             <Stepper
               styleConfig={{
-                completedBgColor: "#e40980",
+                completedBgColor: "#dd6b20",
                 size: "1.5em",
-                activeBgColor: "#a10308",
+                activeBgColor: "yellow",
               }}
               activeStep={step}
             >
@@ -33,9 +37,9 @@ export default function PaymentModal() {
               <Step label="Status" />
             </Stepper>
             {step === 0 ? (
-              <ShippingForm />
+              <ShippingForm setStep={setStep} />
             ) : step === 1 ? (
-              <PaymentMethod />
+              <PaymentMethod setStep={setStep} />
             ) : (
               <Success />
             )}
@@ -45,14 +49,15 @@ export default function PaymentModal() {
             <Button variant="ghost" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button
+            {/* <Button
               onClick={() => {
                 setStep((prevStep) => prevStep + 1);
               }}
-              bgColor="#e40980"
+              bgColor="#dd6b20"
+              color='white'
             >
               Next
-            </Button>
+            </Button> */}
           </ModalFooter>
         </ModalContent>
       </Modal>

@@ -8,11 +8,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { CartContext } from "../../contexts/CartContext";
 // import styles from "./ProductCard.css";
 
 const ProductCard = ({ image, name, price,id }) => {
   const [qty, setQty] = useState(1);
+  const { setCartLength } = useContext(CartContext);
   // const handleRemove = (name) => {
    
   // };
@@ -20,6 +22,7 @@ const ProductCard = ({ image, name, price,id }) => {
     const hanldeDeleteInCart = (id) => {
       const data=JSON.parse(localStorage.getItem('cart'))
       let filteredData = data.filter((el) => el.id!=id);
+      setCartLength((prevLength)=>prevLength-1)
       localStorage.setItem("cart", JSON.stringify(filteredData));
         
     };

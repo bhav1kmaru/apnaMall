@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 const Footer = () => {
   return (
-    <div>
+    <div style={{marginTop:"200px"}}>
       <h4 style={{ marginLeft: "1%" }}>
         {" "}
         From Electronics, Fashion to Cars: Buy Everything Online from the

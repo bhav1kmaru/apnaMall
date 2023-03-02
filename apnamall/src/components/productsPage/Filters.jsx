@@ -10,7 +10,7 @@ const Filters = ({minPrice,maxPrice,minSlider,maxSlider,minDiscount,minDiscountS
       <VStack>
         <h1>Sory By:</h1>
         <select>
-          <option></option>
+          <option>Select an option</option>
           <option value="price_l2h">Price (low to high)</option>
           <option value="price_h2l">Price (hight to low)</option>
           <option value="discount">Highest Discount</option>
