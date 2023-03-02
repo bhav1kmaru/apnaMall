@@ -24,7 +24,6 @@ import {
 } from "@chakra-ui/react";
 import { BsFacebook, BsGithub, BsGoogle } from "react-icons/bs";
 
-
 const initState = {
   name: "",
   email: "",
@@ -66,7 +65,7 @@ const Signup = () => {
         // window.location.href='/login'
       })
       .catch((err) => {
-        console.log(err)
+        console.log(err);
         setLoading(false);
         setErr(err.message);
       });
@@ -112,12 +111,14 @@ const Signup = () => {
                 />
                 <InputControl
                   placeholder="enter your email"
+                  type="email"
                   name="email"
                   label="Email"
                   value={formData.email}
                   handleChange={handleChange}
                 />
                 <InputControl
+                  type="password"
                   placeholder="enter password"
                   name="password"
                   label="Password"
