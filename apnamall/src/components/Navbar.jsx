@@ -2,9 +2,9 @@ import Image from 'next/image'
 import React, { useContext, useEffect, useState } from 'react'
 import Draw from './Drawer'
 import styles from './Navbar.module.css'
-import { Button } from '@chakra-ui/react'
+import { Box, Button, Link } from '@chakra-ui/react'
 import Hamburger from './Hamburger'
-import Link from 'next/link'
+
 import UserDisplayComponent from './UserDisplayComponent'
 import { BsBag } from 'react-icons/bs'
 import { MdNotes } from 'react-icons/md'
@@ -15,11 +15,42 @@ import { CartContext } from '../contexts/CartContext'
 
 const Navbar = () => {
   const {cartLength}=useContext(CartContext)
+  const [searchInput,setSearchInput]=useState("")
+  const [data,setData]=useState([])
+
+  // const searchFunc=()=>{
+  //   let id;
+  //   if(id){
+  //     clearTimeout(id)
+  //   }
+  //   id=setTimeout(()=>{
+  //     handleSearch()
+  //   },3000)
+  // }
+
+  // const handleSearch=()=>{
+  //   console.log(searchInput)
+  // }
+  const getSearchData=async(value)=>{
+    const response = await axios.get(`https://apnamallproducts.vercel.app/allproducts?_limit=10`);
+    console.log(response.data)
+    const data2=response.data
+    const filteredData=data2.filter((el)=>el.title.includes(value))
+    setData(filteredData)
+    console.log(filteredData)
+  }
  
   useEffect(()=>{
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+     if(searchInput!=""){
+      const getData = setTimeout(() => {
+        getSearchData(searchInput);
+      }, 2000);
+
+      return () => clearTimeout(getData);
+     };
+
     
-  })
+  },[searchInput])
   return (
     <div>
       <div style={{ paddingRight: "10%" }} className={styles.invisible}>
@@ -44,6 +75,10 @@ const Navbar = () => {
           <input
             className={styles.search}
             placeholder="Search for a Product,Brand or Category"
+            value={searchInput}
+            onChange={(e) => {
+              setSearchInput(e.target.value);
+            }}
           />
         </div>
         <div>
@@ -71,6 +106,22 @@ const Navbar = () => {
           <UserDisplayComponent />
         </div>
       </div>
+      <Box
+        display={data.length > 0 ? "block" : "none"}
+        overflowY="scroll"
+        w="45%"
+        bgColor="white"
+        position="fixed"
+        left="440px"
+        top="60px"
+        zIndex="10"
+      >
+        {data.map((item) => (
+          <Link key={item.id} href={`/products/${item.id}`}>
+            <h1>{item.title}</h1>
+          </Link>
+        ))}
+      </Box>
     </div>
   );
 }
