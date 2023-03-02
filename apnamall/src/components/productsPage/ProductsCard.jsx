@@ -112,7 +112,7 @@ function ProductsCard({title,image,brand,price,striked_price,rating,discount,tot
 
           <Flex
             onClick={() => {
-              addToCart({ image, title, price });
+              addToCart({ image, title, price,id });
               setAdded(true);
             }}
             p="10px"

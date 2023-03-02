@@ -7,6 +7,7 @@ import Filters from '../../components/productsPage/Filters'
 import ProductsCard from '../../components/productsPage/ProductsCard'
 
 const Brand = () => {
+  
     const router=useRouter()
     const {query:{brand},}=router
     const [data,setData]=useState([])
@@ -27,12 +28,15 @@ const Brand = () => {
       setMaxPrice(value)
     }
     const addToCart=async(data)=>{
-      let r =await fetch(`https://apnamallcart.vercel.app/cart`,{
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: { 'Content-Type': 'application/json'}
-      });
-      console.log(r)
+      // let r =await fetch(`https://apnamallcart.vercel.app/cart`,{
+      //   method: 'POST',
+      //   body: JSON.stringify(data),
+      //   headers: { 'Content-Type': 'application/json'}
+      // });
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(data)
+      localStorage.setItem('cart',JSON.stringify(cart))
+      
     }
   
     const getData=async()=>{

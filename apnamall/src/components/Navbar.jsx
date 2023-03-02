@@ -13,15 +13,12 @@ import axios from 'axios'
 
 
 const Navbar = () => {
-  const [data,setData]=useState([])
-  const getData = async () => {
-    let res = await axios.get("https://apnamallcart.vercel.app/cart");
-    // console.log(res.data);
-    setData(res.data);
-  };
+  const [cartLength,setCartLength]=useState(0)
+ 
   useEffect(()=>{
-    getData()
-  },[data])
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCartLength(cart.length)
+  })
   return (
     <div>
       <div style={{ paddingRight: "10%" }} className={styles.invisible}>
@@ -62,7 +59,7 @@ const Navbar = () => {
                 textAlign: "center",
               }}
             >
-              <BsBag /> Bag ({(data.length)})
+              <BsBag /> Bag ({(cartLength)})
             </Link>
           </Button>
         </div>
