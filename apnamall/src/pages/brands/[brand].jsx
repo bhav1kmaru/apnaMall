@@ -2,9 +2,10 @@ import { Box, Flex, HStack, Select, SimpleGrid, Skeleton } from '@chakra-ui/reac
 import axios from 'axios'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Filters from '../../components/productsPage/Filters'
 import ProductsCard from '../../components/productsPage/ProductsCard'
+import { CartContext } from '../../contexts/CartContext'
 
 const Brand = () => {
   
@@ -15,6 +16,7 @@ const Brand = () => {
     const [maxPrice, setMaxPrice] = useState(5000);
     const [minDiscount,setMinDiscount]=useState(0)
     const [loading,setLoading]=useState(false)
+    const {setCartLength}=useContext(CartContext)
     
    
     
@@ -35,6 +37,7 @@ const Brand = () => {
       // });
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart.push(data)
+      setCartLength((prevLength)=>prevLength+1)
       localStorage.setItem('cart',JSON.stringify(cart))
       
     }

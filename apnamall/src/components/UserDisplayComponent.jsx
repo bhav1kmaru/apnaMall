@@ -33,7 +33,7 @@ const UserDisplayComponent = () => {
   };
   if (!userInfo.email) {
     return (
-      <Button colorScheme="blue" variant="outline">
+      <Button colorScheme="blue" size="sm" variant="outline">
         <Link
           href="/login"
           style={{

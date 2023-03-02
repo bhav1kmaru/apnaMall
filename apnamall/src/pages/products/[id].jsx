@@ -60,6 +60,7 @@ function Rating({ rating, numReviews }) {
 }
 
 export default function ProductPage() {
+  const [added, setAdded] = useState(false);
     const [product,setProduct]=useState({})
     const router=useRouter()
     const [size,setSize]=useState("M")
@@ -176,13 +177,16 @@ export default function ProductPage() {
                 </RadioGroup>
               </Flex>
               <Button
-                onClick={() =>
+              isDisabled={added}
+                onClick={() =>{
                   addToCart({
                     title: product.title,
                     image: product.image,
                     brand: product.brand,
                     price: product.price,
                   })
+                  setAdded(true)
+                }
                 }
                 rounded={"none"}
                 w={"full"}
@@ -201,8 +205,9 @@ export default function ProductPage() {
                 }}
               >
                 <Icon as={BsBag} h={7} w={7} alignSelf={"center"} />{" "}
-                Add to Bag
+                {added?"Added":"Add to Bag"}
               </Button>
+              <Text color='red' display={added?"block":"none"}>Product already in bag</Text>
               <Stack
                 direction="row"
                 alignItems="center"

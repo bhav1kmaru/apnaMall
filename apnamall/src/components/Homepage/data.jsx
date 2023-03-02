@@ -1,7 +1,7 @@
 export const topFlyer = [
   {
     image:
-      "https://cdn.fcglcdn.com/brainbees/banners/mktng_hp_btc_19thjan1674137062394.webp",
+      "https://assets.ajio.com/cms/AJIO/WEB/19012023-UHP-D-26Hrs-P2-JacknJonesVeroModaONLY-Flat60.jpg",
   },
   {
     image:
@@ -13,23 +13,11 @@ export const topFlyer = [
   },
   {
     image:
-      "https://images-static.nykaa.com/uploads/1ff95861-12d2-485e-8334-65f4fd7f4746.jpg?tr=w-1200,cm-pad_resize",
+      "https://assets.ajio.com/cms/AJIO/WEB/22012023-UHP-D-MainBanner-P5-BestsellingSportsShoes-NikeAdidas-3040.jpg",
   },
   {
     image:
-      "https://rukminim1.flixcart.com/fk-p-flap/4044/640/image/483fc2547747864a.jpeg?q=50",
-  },
-  {
-    image:
-      "https://rukminim1.flixcart.com/fk-p-flap/4044/640/image/eb77ebff86336b25.jpeg?q=50",
-  },
-  {
-    image:
-      "https://assets.ajio.com/cms/AJIO/WEB/19012023-UHP-D-26Hrs-P2-JacknJonesVeroModaONLY-Flat60.jpg",
-  },
-  {
-    image:
-      "https://rukminim1.flixcart.com/fk-p-flap/4044/640/image/11946434f052f86f.jpg?q=50",
+      "https://assets.ajio.com/cms/AJIO/WEB/22012023-UHP-D-MainBanner-P6-SuperBrandDays-MnSSuperdry-Min50.jpg",
   },
 ];
 
