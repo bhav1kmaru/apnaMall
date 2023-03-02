@@ -33,13 +33,11 @@ const Login = () => {
   const [formData, setFormData] = useState(initState);
   const [err, setErr] = useState(false);
   const [loading, setLoading] = useState(false);
-  const router=useRouter()
+  const router = useRouter();
 
   const handleChange = (key, value) => {
     setFormData({ ...formData, [key]: value });
   };
-
-
 
   const handleSubmission = () => {
     if (formData.email === "" || formData.password === "") {
@@ -50,21 +48,23 @@ const Login = () => {
     signInWithEmailAndPassword(auth, formData.email, formData.password)
       .then(async (res) => {
         // await updateProfile(res.user);
-        console.log("data",res.user);
+        // console.log("data", res.user);
         alert("Login sucessfull");
         setErr("");
         setLoading(false);
-         let userInfo = {
-           email: res.user.email,
-           image: res.user.photoURL,
-           name:res.user.displayName
-         };
-         localStorage.setItem("userInfo", JSON.stringify(userInfo));
-         window.location.href='/'
+        let userInfo = {
+          email: res.user.email,
+          image: res.user.photoURL,
+          name: res.user.displayName,
+        };
+
+        console.log("user info", userInfo);
+        localStorage.setItem("userInfo", JSON.stringify(userInfo));
+        window.location.href = "/";
         //  console.log(userInfo);
       })
       .catch((err) => {
-        console.log(err)
+        console.log(err);
         setLoading(false);
         setErr(err.message);
       });
@@ -103,6 +103,7 @@ const Login = () => {
               <VStack>
                 <InputControl
                   placeholder="enter your email"
+                  type="email"
                   name="email"
                   label="Email"
                   value={formData.email}
@@ -110,6 +111,7 @@ const Login = () => {
                 />
                 <InputControl
                   placeholder="enter your password"
+                  type="password"
                   name="password"
                   label="Password"
                   value={formData.password}
@@ -127,7 +129,9 @@ const Login = () => {
             </FormControl>
             <Box py="20px">
               <Text fontSize={{ base: "18px", sm: "18px", md: "16px" }}>
-                {"Don't"} have an account ? <Link href="/signup">SignUp</Link><br/><br/>
+                {"Don't"} have an account ? <Link href="/signup">SignUp</Link>
+                <br />
+                <br />
                 <a href="https://apnamalldashboard.netlify.app/">
                   Login as Admin
                 </a>
