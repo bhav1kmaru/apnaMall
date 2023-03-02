@@ -30,6 +30,8 @@ import { FiShoppingCart } from "react-icons/fi";
 import Reviews from "../../components/productsPage/Reviews";
 import { BsBag, BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import Link from "next/link";
+import { CartContext } from "../../contexts/CartContext";
+import { useContext } from "react";
 
 function Rating({ rating, numReviews }) {
   return (
@@ -65,6 +67,7 @@ export default function ProductPage() {
     const router=useRouter()
     const [size,setSize]=useState("M")
     const [loading,setLoading]=useState(false)
+    const { setCartLength } = useContext(CartContext);
     const {query:{
         id
     }}=router
@@ -76,12 +79,10 @@ export default function ProductPage() {
        
     }
      const addToCart = async (data) => {
-       let r = await fetch(`https://apnamallcart.vercel.app/cart`, {
-         method: "POST",
-         body: JSON.stringify(data),
-         headers: { "Content-Type": "application/json" },
-       });
-       console.log(r);
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(data);
+        setCartLength((prevLength) => prevLength + 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
      };
     useEffect(()=>{
         getData()

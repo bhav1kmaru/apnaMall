@@ -15,6 +15,7 @@ import {
   Radio,
   Button,
   useDisclosure,
+  Link,
 } from '@chakra-ui/react'
 import Draw from './Drawer'
 import UserDisplayComponent from './UserDisplayComponent'
@@ -33,7 +34,12 @@ const Hamburger = () => {
         </Stack> */}
       </RadioGroup>
       <div>
-        <Image src="/apnaLogoFinal.png" alt="broken" width="80" height="80"></Image>
+        <Image
+          src="/apnaLogoFinal.png"
+          alt="broken"
+          width="80"
+          height="80"
+        ></Image>
       </div>
       <div>
         <UserDisplayComponent />
@@ -45,42 +51,51 @@ const Hamburger = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader borderBottomWidth="1px">
-            {' '}
-            <div style={{ height: '50px' }}>
-              <Image src="/apnaLogoFinal.png" alt="broken" width="80" height="80"></Image>
+            {" "}
+            <div style={{ height: "50px" }}>
+              <Image
+                src="/apnaLogoFinal.png"
+                alt="broken"
+                width="80"
+                height="80"
+              ></Image>
             </div>
           </DrawerHeader>
           <DrawerBody>
-            <div style={{ widht: '100%' }}>
+            <div style={{ widht: "100%", marginBottom: "10px" }}>
               <Draw />
             </div>
-            <div style={{ widht: '100%' }}>
+            {/* <div style={{ widht: "100%" }}>
               <input
                 className={styles.search}
                 placeholder="Search for a Product, Brand or Category"
               />
-            </div>
-            <div style={{ widht: '100%' }}>
-              {' '}
-              <Button w={'100%'} colorScheme="blue" variant="outline">
+            </div> */}
+            <div style={{ widht: "100%", marginBottom: "10px" }}>
+              {" "}
+              <Button w={"100%"} colorScheme="blue" variant="outline">
                 My Orders
               </Button>
             </div>
-            <div style={{ widht: '100%' }}>
-              <Button w={'100%'} colorScheme="blue" variant="outline">
-                cart
-              </Button>
+            <div style={{ widht: "100%", marginBottom: "10px" }}>
+              <Link href="/cart">
+                <Button w={"100%"} colorScheme="blue" variant="outline">
+                  Bag
+                </Button>
+              </Link>
             </div>
-            <div style={{ widht: '100%' }}>
-              <Button w={'100%'} colorScheme="blue" variant="outline">
-                Log In/Sign Up
-              </Button>
+            <div style={{ widht: "100%", marginBottom: "10px" }}>
+              <Link href="/login">
+                <Button w={"100%"} colorScheme="blue" variant="outline">
+                  Log In/Sign Up
+                </Button>
+              </Link>
             </div>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
     </>
-  )
+  );
 }
 
 export default Hamburger

@@ -12,12 +12,15 @@ import {
   Radio,
   Button,
   useDisclosure,
+  Link,
 } from "@chakra-ui/react";
 import { GiClothes } from "react-icons/gi";
 
 function Draw() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [placement, setPlacement] = React.useState("left");
+  const brands=['peterengland','uspolo','jacknjones','levis','ucb','only','pantaloons']
+
 
   return (
     <>
@@ -32,7 +35,6 @@ function Draw() {
       <Button
         w={"100%"}
         variant="outline"
-        size="sm"
         colorScheme="blue"
         onClick={onOpen}
         style={{ display: "flex", gap: "10px" }}
@@ -44,9 +46,13 @@ function Draw() {
         <DrawerContent>
           <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
           <DrawerBody>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
+            <Stack>
+              {brands.map((el) => (
+                <Link key={el} href={`/brands/${el}`}>
+                  {el}
+                </Link>
+              ))}
+            </Stack>
           </DrawerBody>
         </DrawerContent>
       </Drawer>

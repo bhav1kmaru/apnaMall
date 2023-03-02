@@ -35,7 +35,8 @@ const Navbar = () => {
     const response = await axios.get(`https://apnamallproducts.vercel.app/allproducts?_limit=10`);
     console.log(response.data)
     const data2=response.data
-    const filteredData=data2.filter((el)=>el.title.includes(value))
+    
+    const filteredData=data2.filter((el)=>el.title.includes(value) || el.brand.includes(value))
     setData(filteredData)
     console.log(filteredData)
   }
@@ -43,8 +44,8 @@ const Navbar = () => {
   useEffect(()=>{
      if(searchInput!=""){
       const getData = setTimeout(() => {
-        getSearchData(searchInput);
-      }, 2000);
+        getSearchData(searchInput[0].toUpperCase()+searchInput.substring(1));
+      }, 1000);
 
       return () => clearTimeout(getData);
      };
@@ -74,12 +75,29 @@ const Navbar = () => {
         <div className={styles.mall}>
           <input
             className={styles.search}
-            placeholder="Search for a Product,Brand or Category"
+            placeholder="Search for a Product"
             value={searchInput}
             onChange={(e) => {
               setSearchInput(e.target.value);
             }}
           />
+          <Box
+            display={data.length > 0 ? "block" : "none"}
+            overflowY="scroll"
+            w="45%"
+            bgColor="white"
+            position="absolute"
+            // left="440px"
+            // top="60px"
+            // zIndex="10"
+            m='auto'
+          >
+            {data.map((item) => (
+              <Link key={item.id} href={`/products/${item.id}`}>
+                <h1>{item.title}</h1>
+              </Link>
+            ))}
+          </Box>
         </div>
         <div>
           {" "}
@@ -106,22 +124,6 @@ const Navbar = () => {
           <UserDisplayComponent />
         </div>
       </div>
-      <Box
-        display={data.length > 0 ? "block" : "none"}
-        overflowY="scroll"
-        w="45%"
-        bgColor="white"
-        position="fixed"
-        left="440px"
-        top="60px"
-        zIndex="10"
-      >
-        {data.map((item) => (
-          <Link key={item.id} href={`/products/${item.id}`}>
-            <h1>{item.title}</h1>
-          </Link>
-        ))}
-      </Box>
     </div>
   );
 }
