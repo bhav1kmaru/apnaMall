@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Draw from './Drawer'
 import styles from './Navbar.module.css'
 import { Button } from '@chakra-ui/react'
@@ -9,9 +9,19 @@ import UserDisplayComponent from './UserDisplayComponent'
 import { BsBag } from 'react-icons/bs'
 import { MdNotes } from 'react-icons/md'
 import { FaSearch } from 'react-icons/fa'
+import axios from 'axios'
 
 
 const Navbar = () => {
+  const [data,setData]=useState([])
+  const getData = async () => {
+    let res = await axios.get("https://apnamallcart.vercel.app/cart");
+    // console.log(res.data);
+    setData(res.data);
+  };
+  useEffect(()=>{
+    getData()
+  },[data])
   return (
     <div>
       <div style={{ paddingRight: "10%" }} className={styles.invisible}>
@@ -52,7 +62,7 @@ const Navbar = () => {
                 textAlign: "center",
               }}
             >
-              <BsBag /> Bag
+              <BsBag /> Bag ({(data.length)})
             </Link>
           </Button>
         </div>
