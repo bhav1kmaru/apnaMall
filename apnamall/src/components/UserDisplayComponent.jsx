@@ -53,7 +53,7 @@ const UserDisplayComponent = () => {
       <Menu>
         <MenuButton>
           <Flex gap="10px" alignItems="center">
-            <Text>{userInfo.email}</Text>
+            <Text>{userInfo.name || userInfo.email}</Text>
             <Avatar src={userInfo.image} />
           </Flex>
         </MenuButton>
