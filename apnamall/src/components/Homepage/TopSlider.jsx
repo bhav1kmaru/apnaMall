@@ -26,8 +26,11 @@ const TopSlider = ({ DataArray }) => {
         nav: true,
         autoplay: true,
         autoplayHoverPause: true,
+        // autoplayTimeout: 3000,
         navSpeed: 500,
         slideBy: 1,
+        animateIn: 'wobble',
+        animateOut: 'wobble',
         smartSpeed: 1000,
         navClass: ["owl-prev", "owl-next"],
         navText: [

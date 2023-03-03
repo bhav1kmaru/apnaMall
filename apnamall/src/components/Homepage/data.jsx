@@ -1,10 +1,10 @@
 export const topFlyer = [
     {
-        "image": "https://cdn.fcglcdn.com/brainbees/banners/mktng_hp_btc_19thjan1674137062394.webp",
+        "image": "https://assets.ajio.com/cms/AJIO/WEB/Top-D-Fashionation-5090-1440x470.gif",
 
     },
     {
-        "image": "https://assets.ajio.com/cms/AJIO/WEB/20012023-UHP-D-MainBanner-P7-BrandedWatches-DanielKleinTimex-Starting499.jpg",
+        "image": "https://assets.ajio.com/cms/AJIO/WEB/23012023-UHP-D-MainBanner-P3-WarmWinter-BelleFilleCampusSutra-Upto75.jpg",
 
     },
     {
@@ -12,25 +12,17 @@ export const topFlyer = [
 
     },
     {
-        "image": "https://images-static.nykaa.com/uploads/1ff95861-12d2-485e-8334-65f4fd7f4746.jpg?tr=w-1200,cm-pad_resize",
+        "image": "https://assets.ajio.com/cms/AJIO/WEB/23012023-UHP-D-MainBanner-P6-Trends-Flat70.jpg",
 
     },
     {
-        "image": "https://rukminim1.flixcart.com/fk-p-flap/4044/640/image/483fc2547747864a.jpeg?q=50",
-
-    },
-    {
-        "image": "https://rukminim1.flixcart.com/fk-p-flap/4044/640/image/eb77ebff86336b25.jpeg?q=50",
+        "image": "https://assets.ajio.com/cms/AJIO/WEB/23012023-UHP-D-MainBanner-P7-NecklacesJewellerySets-ThePariMahi-Under599.jpg",
 
     },
     {
         "image": "https://assets.ajio.com/cms/AJIO/WEB/19012023-UHP-D-26Hrs-P2-JacknJonesVeroModaONLY-Flat60.jpg",
 
     },
-    {
-        "image": "https://rukminim1.flixcart.com/fk-p-flap/4044/640/image/11946434f052f86f.jpg?q=50",
-
-    }
 ]
 
 export const DataArray1 = [
@@ -343,4 +335,14 @@ export const Jewellery_Brands = [
     },
 ]
 
+// export const ServiceData = [
+//     {
+//         "image": "https://slimages.macysassets.com/is/image/McomMedia/media/061021INTLHOMEPAGETEAMPLATEBANNER10301_1433052.png?scl=1&fmt=webp&wid=1600"
+//     },
+    
+// ]
 
+
+
+  
+                                    
