@@ -16,7 +16,7 @@ export default function PaymentModal({total}) {
       </Button>
 
       <Modal isOpen={isOpen} onClose={()=>{
-        localStorage.removeItem('cart')
+        
         onClose()
         }}>
         <ModalOverlay />

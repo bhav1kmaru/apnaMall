@@ -29,6 +29,7 @@ const PaymentMethod = ({setStep,total}) => {
         isDisabled={!payment}
         onClick={() => {
           setStep((prevStep) => prevStep + 1);
+          localStorage.removeItem("cart");
         }}
         bgColor="#dd6b20"
         color="white"
@@ -90,6 +91,7 @@ const PaymentMethod = ({setStep,total}) => {
         }
         onClick={() => {
           setStep((prevStep) => prevStep + 1);
+          localStorage.removeItem("cart");
         }}
         bgColor="#dd6b20"
         color="white"
