@@ -1,20 +1,9 @@
-
-import Head from 'next/head'
-import Image from 'next/image'
 import HomePage from "@/components/Homepage/HomePage";
-
-
-
-
+// import Layout from "@/components/Layout";
 export default function Home() {
-
-
-
 	return (
-		<div>
+		// <Layout>
 			<HomePage />
-		</div>
+		/* </Layout> */
 	);
-
-
 }

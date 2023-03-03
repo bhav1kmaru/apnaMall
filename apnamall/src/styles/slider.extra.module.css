@@ -68,6 +68,7 @@
 .slider_cmn_div,
 .NoSlider_cmn_div {
 	position: relative;
+	cursor: pointer;
 }
 
 .slider1_cmn_div::before,
@@ -84,10 +85,27 @@
 	height: 5px;
 	background: #ef4e28;
 	border-radius: 2px;
+	cursor: pointer;
 }
 
-.top_slider_main_div{
-margin-top: 50px;
+.NoSlider_cmn_div::after {
+	content: "";
+	position: absolute;
+	left: 46.3%;
+	margin: auto;
+	align-items: center;
+	margin-bottom: 5px;
+	bottom: 0;
+	width: 100px;
+	height: 5px;
+	background: #ef4e28;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.top_slider_main_div,.service_div,.ipd_offer,.ipd_offer{
+/* margin-top: 50px; */
+  cursor: pointer
 }
 
 .service_div{
