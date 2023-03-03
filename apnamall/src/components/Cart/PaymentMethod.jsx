@@ -96,7 +96,7 @@ const PaymentMethod = ({setStep,total}) => {
         bgColor="#dd6b20"
         color="white"
       >
-        Pay ₹{total}
+        Pay ₹{total + 50}
       </Button>
     </Stack>
   );

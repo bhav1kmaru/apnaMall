@@ -27,6 +27,7 @@ const UserDisplayComponent = () => {
 
   const logout = () => {
     localStorage.removeItem("userInfo");
+    localStorage.removeItem("cart");
     setUserInfo({});
     window.location.reload();
     // setIsLoggedIn(false)
