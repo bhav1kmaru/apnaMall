@@ -107,12 +107,12 @@ const Navbar = () => {
             </Stack>
           </Box>
         </div>
-        <div>
+        {/* <div>
           {" "}
           <Button size="sm" colorScheme="blue" variant="outline">
             <MdNotes /> My Orders
           </Button>
-        </div>
+        </div> */}
         <div>
           <Button colorScheme="blue" size="sm" variant="outline">
             <Link
