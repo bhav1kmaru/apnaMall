@@ -44,7 +44,7 @@ function Draw() {
       <Drawer mt="100" placement={placement} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
+          <DrawerHeader borderBottomWidth="1px">Brands & Categories</DrawerHeader>
           <DrawerBody>
             <Stack>
               {brands.map((el) => (
