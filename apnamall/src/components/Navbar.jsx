@@ -1,8 +1,8 @@
-import Image from 'next/image'
+
 import React, { useContext, useEffect, useState } from 'react'
 import Draw from './Drawer'
 import styles from './Navbar.module.css'
-import { Box, Button, Link } from '@chakra-ui/react'
+import { Box, Button, Flex, Image, Link, Stack } from '@chakra-ui/react'
 import Hamburger from './Hamburger'
 
 import UserDisplayComponent from './UserDisplayComponent'
@@ -11,6 +11,7 @@ import { MdNotes } from 'react-icons/md'
 import { FaSearch } from 'react-icons/fa'
 import axios from 'axios'
 import { CartContext } from '../contexts/CartContext'
+
 
 
 const Navbar = () => {
@@ -32,19 +33,20 @@ const Navbar = () => {
   //   console.log(searchInput)
   // }
   const getSearchData=async(value)=>{
-    const response = await axios.get(`https://apnamallproducts.vercel.app/allproducts?_limit=10`);
+    const response = await axios.get(`https://apnamallproducts.vercel.app/allproducts?q=${value}`);
     console.log(response.data)
-    const data2=response.data
+    setData(response.data)
+    // const data2=response.data
     
-    const filteredData=data2.filter((el)=>el.title.includes(value) || el.brand.includes(value))
-    setData(filteredData)
-    console.log(filteredData)
+    // const filteredData=data2.filter((el)=>el.title.includes(value) || el.brand.includes(value))
+    // setData(filteredData)
+    // console.log(filteredData)
   }
  
   useEffect(()=>{
      if(searchInput!=""){
       const getData = setTimeout(() => {
-        getSearchData(searchInput[0].toUpperCase()+searchInput.substring(1));
+        getSearchData(searchInput);
       }, 1000);
 
       return () => clearTimeout(getData);
@@ -60,13 +62,13 @@ const Navbar = () => {
       <div className={styles.red}>
         <div className={styles.logo}>
           <Link href="/">
-            <Image
+            <img
               src="/apnaLogoFinal.png"
               alt="broken"
               width="140"
               height="140"
               style={{ margin: "10px" }}
-            ></Image>
+            ></img>
           </Link>
         </div>
         <div>
@@ -82,7 +84,7 @@ const Navbar = () => {
             }}
           />
           <Box
-            display={data.length > 0 ? "block" : "none"}
+            display={data.length > 0 && searchInput != "" ? "block" : "none"}
             overflowY="scroll"
             w="45%"
             bgColor="white"
@@ -90,13 +92,19 @@ const Navbar = () => {
             // left="440px"
             // top="60px"
             // zIndex="10"
-            m='auto'
+            m="auto"
+            maxH='500px'
           >
-            {data.map((item) => (
-              <Link key={item.id} href={`/products/${item.id}`}>
-                <h1>{item.title}</h1>
-              </Link>
-            ))}
+            <Stack gap="10px">
+              {data.map((item) => (
+                <Link key={item.id} href={`/products/${item.id}`}>
+                  <Flex>
+                    <Image h='50px' w='50px' src={item.image} />
+                    <h1>{item.title}</h1>
+                  </Flex>
+                </Link>
+              ))}
+            </Stack>
           </Box>
         </div>
         <div>
