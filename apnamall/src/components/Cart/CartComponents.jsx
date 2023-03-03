@@ -115,7 +115,7 @@ const CartComponents = () => {
               </Text>
             </Stack>
           </Flex>
-          <PaymentModal />
+          <PaymentModal total={total} />
         </Stack>
       </Stack>
     </Center>

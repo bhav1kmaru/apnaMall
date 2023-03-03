@@ -1,17 +1,22 @@
 import { Box, Button, Flex, Input, Select, Stack, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
 
-const PaymentMethod = ({setStep}) => {
+const PaymentMethod = ({setStep,total}) => {
     const [online,setOnline]=useState(false)
     const [cardDetails,setCardDetails]=useState({num:"",name:"",exp:"",cvv:""})
+    const [payment,setPayment]=useState(false)
   return (
     <Stack gap="20px">
       <Select
         onChange={(e) => {
           if (e.target.value === "2") {
             setOnline(true);
-          } else {
+          } else if(e.target.value==="1"){
             setOnline(false);
+            setPayment(true)
+          }else{
+            setOnline(false);
+            setPayment(false)
           }
         }}
       >
@@ -21,6 +26,7 @@ const PaymentMethod = ({setStep}) => {
       </Select>
       <Button
         display={online ? "none" : "block"}
+        isDisabled={!payment}
         onClick={() => {
           setStep((prevStep) => prevStep + 1);
         }}
@@ -53,7 +59,6 @@ const PaymentMethod = ({setStep}) => {
             onChange={(e) =>
               setCardDetails({ ...cardDetails, exp: e.target.value })
             }
-            
             placeholder="Expiry Date"
           />
           <Input
@@ -69,7 +74,10 @@ const PaymentMethod = ({setStep}) => {
       <Text color="red" display={cardDetails.cvv.length > 3 ? "block" : "none"}>
         *CVV should be of 3 digits only.
       </Text>
-      <Text color="red" display={cardDetails.num.length > 16 ? "block" : "none"}>
+      <Text
+        color="red"
+        display={cardDetails.num.length > 16 ? "block" : "none"}
+      >
         *Card Number should be of 16 digits only.
       </Text>
       <Button
@@ -86,7 +94,7 @@ const PaymentMethod = ({setStep}) => {
         bgColor="#dd6b20"
         color="white"
       >
-        Next
+        Pay ₹{total}
       </Button>
     </Stack>
   );

@@ -5,7 +5,7 @@ import PaymentMethod from "./PaymentMethod";
 import ShippingForm from "./ShippingForm";
 import Success from "./Success";
 
-export default function PaymentModal() {
+export default function PaymentModal({total}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [step,setStep]=useState(0)
   
@@ -39,7 +39,7 @@ export default function PaymentModal() {
             {step === 0 ? (
               <ShippingForm setStep={setStep} />
             ) : step === 1 ? (
-              <PaymentMethod setStep={setStep} />
+              <PaymentMethod setStep={setStep} total={total} />
             ) : (
               <Success />
             )}

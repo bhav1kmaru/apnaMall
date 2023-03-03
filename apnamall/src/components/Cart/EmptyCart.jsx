@@ -10,9 +10,11 @@ const EmptyCart = () => {
       <Stack gap="40px" textAlign="center">
         <Image src="https://media4.ppl-media.com/mediafiles/ecomm/webengage/1456403495_empty-bag-25022016.png" />
         <Text>There are no items in the cart.</Text>
-        <Button bgColor="#dd6b20" color="white">
-          <Link href="/">Continue Shopping</Link>
-        </Button>
+        <Link href="/" onClick={() => localStorage.removeItem("cart")}>
+          <Button bgColor="#dd6b20" color="white">
+            Continue Shopping
+          </Button>
+        </Link>
       </Stack>
     </Center>
   );
