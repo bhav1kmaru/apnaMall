@@ -77,7 +77,7 @@ const Navbar = () => {
         <div className={styles.mall}>
           <input
             className={styles.search}
-            placeholder="Search for a Product"
+            placeholder="Search for a Product,Category or Brand"
             value={searchInput}
             onChange={(e) => {
               setSearchInput(e.target.value);
