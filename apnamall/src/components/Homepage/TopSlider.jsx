@@ -5,15 +5,14 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import styles from "../../styles/slider.extra.module.css"
 import { Image } from "@chakra-ui/react";
 
-
 var $ = require("jquery");
 if (typeof window !== "undefined") {
-    window.$ = window.jQuery = require("jquery");
+  window.$ = window.jQuery = require("jquery");
 }
 
 // This is for Next.js. On Rect JS remove this line
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-    ssr: false,
+  ssr: false,
 });
 
 // This is for React JS, Remove this for Next.js
@@ -109,5 +108,6 @@ const TopSlider = ({ DataArray }) => {
             </div>
         </div>
     )
+
 };
 export default TopSlider;

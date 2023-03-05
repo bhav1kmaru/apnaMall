@@ -6,6 +6,7 @@
     width: 1%; */
 	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
 		rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
 }
 
 .small_slider_items:hover {
@@ -28,6 +29,7 @@
 	font-family: Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue,
 		Segoe UI, sans-serif;
 	margin-top: 15px;
+
 }
 
 .title_text:hover {
@@ -62,12 +64,15 @@
 }
 .slider1_cmn_div {
 	margin: 30rem 0;
+
+
 }
 
 .slider1_cmn_div,
 .slider_cmn_div,
 .NoSlider_cmn_div {
 	position: relative;
+
 }
 
 .slider1_cmn_div::before,
@@ -94,3 +99,4 @@ margin-top: 50px;
 	display: grid;
 	grid-template-columns: repeat(4,1fr);
 }
+

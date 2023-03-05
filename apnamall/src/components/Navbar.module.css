@@ -1,3 +1,6 @@
+
+
+
 .red {
     display: flex;
     flex-direction: row;
@@ -9,6 +12,10 @@
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     z-index: 10;
+}
+
+.invisible {
+    display: none;
 }
 
 .logo {
@@ -38,9 +45,23 @@
 }
 
 @media screen and (min-width: 10px) and (max-width: 600px) {
+    .invisible {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
     .red {
         flex-direction: column;
         background-color: white;
+        display: none;
     }
 
     .red>div {

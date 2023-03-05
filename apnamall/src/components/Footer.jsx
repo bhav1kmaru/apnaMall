@@ -13,13 +13,13 @@ import {
 } from "@chakra-ui/react";
 const Footer = () => {
   return (
-    <div>
-      <h5 style={{ marginLeft: "1%" }}>
+    <div style={{marginTop:"200px"}}>
+      <h4 style={{ marginLeft: "1%" }}>
         {" "}
         From Electronics, Fashion to Cars: Buy Everything Online from the
         Convenence of Your Home from Paytm Mall
-      </h5>
-      <TableContainer>
+      </h4>
+      <TableContainer bg={"teal"}>
         <Table variant="simple">
           <TableCaption>Imperial to metric conversion factors</TableCaption>
 
@@ -27,69 +27,69 @@ const Footer = () => {
           <Tbody>
             <Tr>
               <Td>
-                <Select variant="flushed" placeholder="Electronics">
-                  <option variant="flushed" value="option1">
+                <Select variant="simple" placeholder="Electronics">
+                  <option variant="simple" value="option1">
                     Option 1
                   </option>
-                  <option variant="flushed" value="option2">
+                  <option variant="simple" value="option2">
                     Option 2
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
                 </Select>
               </Td>
               <Td>
-                <Select variant="flushed" placeholder="Mobile">
-                  <option variant="flushed" value="option1">
+                <Select variant="simple" placeholder="Mobile">
+                  <option variant="simple" value="option1">
                     Option 1
                   </option>
-                  <option variant="flushed" value="option2">
+                  <option variant="simple" value="option2">
                     Option 2
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
                 </Select>
               </Td>
               <Td>
-                <Select variant="flushed" placeholder="Cars & Bike">
-                  <option variant="flushed" value="option1">
+                <Select variant="simple" placeholder="Cars & Bike">
+                  <option variant="simple" value="option1">
                     Option 1
                   </option>
-                  <option variant="flushed" value="option2">
+                  <option variant="simple" value="option2">
                     Option 2
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
                 </Select>
               </Td>
               <Td>
-                <Select variant="flushed" placeholder="Super Market">
-                  <option variant="flushed" value="option1">
+                <Select variant="simple" placeholder="Super Market">
+                  <option variant="simple" value="option1">
                     Option 1
                   </option>
-                  <option variant="flushed" value="option2">
+                  <option variant="simple" value="option2">
                     Option 2
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
                 </Select>
               </Td>
               <Td>
-                <Select variant="flushed" placeholder="Women's Fashion">
-                  <option variant="flushed" value="option1">
+                <Select variant="simple" placeholder="Women's Fashion">
+                  <option variant="simple" value="option1">
                     Option 1
                   </option>
-                  <option variant="flushed" value="option2">
+                  <option variant="simple" value="option2">
                     Option 2
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
                 </Select>
@@ -97,63 +97,63 @@ const Footer = () => {
             </Tr>
             <Tr>
               <Td>
-                <Select variant="flushed" placeholder="Men's Fashion">
+                <Select variant="simple" placeholder="Men's Fashion">
                   <option value="option1">Option 1</option>
                   <option value="option2">Option 2</option>
                   <option value="option3">Option 3</option>
                 </Select>
               </Td>
               <Td>
-                <Select variant="flushed" placeholder="Select option">
-                  <option variant="flushed" value="option1">
+                <Select variant="simple" placeholder="Select option">
+                  <option variant="simple" value="option1">
                     Option 1
                   </option>
-                  <option variant="flushed" value="option2">
+                  <option variant="simple" value="option2">
                     Option 2
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
                 </Select>
               </Td>
               <Td>
-                <Select variant="flushed" placeholder="Home & Kitchen">
-                  <option variant="flushed" value="option1">
+                <Select variant="simple" placeholder="Home & Kitchen">
+                  <option variant="simple" value="option1">
                     Option 1
                   </option>
-                  <option variant="flushed" value="option2">
+                  <option variant="simple" value="option2">
                     Option 2
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
                 </Select>
               </Td>
               <Td>
-                <Select variant="flushed" placeholder="Baby, Kids & Toys">
-                  <option variant="flushed" value="option1">
+                <Select variant="simple" placeholder="Baby, Kids & Toys">
+                  <option variant="simple" value="option1">
                     Option 1
                   </option>
-                  <option variant="flushed" value="option2">
+                  <option variant="simple" value="option2">
                     Option 2
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
                 </Select>
               </Td>
               <Td>
-                <Select variant="flushed" placeholder="Cars, Bike & Accesories">
-                  <option variant="flushed" value="option1">
+                <Select variant="simple" placeholder="Cars, Bike & Accesories">
+                  <option variant="simple" value="option1">
                     Option 1
                   </option>
-                  <option variant="flushed" value="option2">
+                  <option variant="simple" value="option2">
                     Option 2
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
                 </Select>
@@ -161,34 +161,34 @@ const Footer = () => {
             </Tr>
             <Tr>
               <Td>
-                <Select variant="flushed" placeholder="Sports & Fitness">
+                <Select variant="simple" placeholder="Sports & Fitness">
                   <option value="option1">Option 1</option>
                   <option value="option2">Option 2</option>
                   <option value="option3">Option 3</option>
                 </Select>
               </Td>
               <Td>
-                <Select variant="flushed" placeholder="Stationery">
-                  <option variant="flushed" value="option1">
+                <Select variant="simple" placeholder="Stationery">
+                  <option variant="simple" value="option1">
                     Option 1
                   </option>
-                  <option variant="flushed" value="option2">
+                  <option variant="simple" value="option2">
                     Option 2
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
                 </Select>
               </Td>
               <Td>
-                <Select variant="flushed" placeholder="Travel Cards">
-                  <option variant="flushed" value="option1">
+                <Select variant="simple" placeholder="Travel Cards">
+                  <option variant="simple" value="option1">
                     Option 1
                   </option>
-                  <option variant="flushed" value="option2">
+                  <option variant="simple" value="option2">
                     Option 2
                   </option>
-                  <option variant="flushed" value="option3">
+                  <option variant="simple" value="option3">
                     Option 3
                   </option>
                 </Select>

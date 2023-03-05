@@ -2,18 +2,21 @@ import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import styles from "../../styles/slider.extra.module.css"
+import styles from "../../styles/slider.extra.module.css";
 import Image from "next/image";
 import { Skeleton, SkeletonCircle } from "@chakra-ui/react";
 
+import Link from "next/link";
+
+
 var $ = require("jquery");
 if (typeof window !== "undefined") {
-    window.$ = window.jQuery = require("jquery");
+  window.$ = window.jQuery = require("jquery");
 }
 
 // This is for Next.js. On Rect JS remove this line
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-    ssr: false,
+  ssr: false,
 });
 
 // This is for React JS, Remove this for Next.js
@@ -206,5 +209,6 @@ const Slider = ({ DataArray }) => {
             </div>
         // </div>
     )
+ 
 };
 export default Slider;
