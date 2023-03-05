@@ -1,25 +1,29 @@
 export const topFlyer = [
-  {
-    image:
-      "https://assets.ajio.com/cms/AJIO/WEB/19012023-UHP-D-26Hrs-P2-JacknJonesVeroModaONLY-Flat60.jpg",
-  },
-  {
-    image:
-      "https://assets.ajio.com/cms/AJIO/WEB/20012023-UHP-D-MainBanner-P7-BrandedWatches-DanielKleinTimex-Starting499.jpg",
-  },
-  {
-    image:
-      "https://assets.ajio.com/cms/AJIO/WEB/20012023-UHP-D-MainBanner-P6-SmartWorkwear-VanHeusenAllenSolly-Min40.jpg",
-  },
-  {
-    image:
-      "https://assets.ajio.com/cms/AJIO/WEB/22012023-UHP-D-MainBanner-P5-BestsellingSportsShoes-NikeAdidas-3040.jpg",
-  },
-  {
-    image:
-      "https://assets.ajio.com/cms/AJIO/WEB/22012023-UHP-D-MainBanner-P6-SuperBrandDays-MnSSuperdry-Min50.jpg",
-  },
-];
+    {
+        "image": "https://assets.ajio.com/cms/AJIO/WEB/Top-D-Fashionation-5090-1440x470.gif",
+
+    },
+    {
+        "image": "https://assets.ajio.com/cms/AJIO/WEB/23012023-UHP-D-MainBanner-P3-WarmWinter-BelleFilleCampusSutra-Upto75.jpg",
+
+    },
+    {
+        "image": "https://assets.ajio.com/cms/AJIO/WEB/20012023-UHP-D-MainBanner-P6-SmartWorkwear-VanHeusenAllenSolly-Min40.jpg",
+
+    },
+    {
+        "image": "https://assets.ajio.com/cms/AJIO/WEB/23012023-UHP-D-MainBanner-P6-Trends-Flat70.jpg",
+
+    },
+    {
+        "image": "https://assets.ajio.com/cms/AJIO/WEB/23012023-UHP-D-MainBanner-P7-NecklacesJewellerySets-ThePariMahi-Under599.jpg",
+
+    },
+    {
+        "image": "https://assets.ajio.com/cms/AJIO/WEB/19012023-UHP-D-26Hrs-P2-JacknJonesVeroModaONLY-Flat60.jpg",
+
+    },
+]
 
 export const DataArray1 = [
   {
@@ -261,107 +265,128 @@ export const DataArray2 = [
   },
 ];
 
-const temp = [...DataArray1]
 
-export const DataArray3=temp.reverse()
+// const temp = [...DataArray1]
 
-// export const DataArray3 = [
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/994298/1643713113821.jpg?imwidth=140&impolicy=hq",
-//     text: "Tailorman",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/994348/1643715968772.jpg?imwidth=140&impolicy=hq",
-//     text: "Disrupt",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/994350/1643716033149.jpg?imwidth=140&impolicy=hq",
-//     text: "Simon Carter",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/995524/1643867277967.jpg?imwidth=140&impolicy=hq",
-//     text: "Bata",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/995525/1643867496758.jpg?imwidth=140&impolicy=hq",
-//     text: "Nike",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/995526/1643867362885.png?imwidth=140&impolicy=hq",
-//     text: "Puma",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/995527/1643867532232.jpg?imwidth=140&impolicy=hq",
-//     text: "Khadim's",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/995528/1643867625370.jpg?imwidth=140&impolicy=hq",
-//     text: "Red Chief",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/710655/1643866806024.jpg?imwidth=140&impolicy=hq",
-//     text: "Speedo",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/995529/1643867506442.jpg?imwidth=140&impolicy=hq",
-//     text: "Sports Station",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/995530/1643867664954.jpg?imwidth=140&impolicy=hq",
-//     text: "Woodland",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/710654/1643866837835.jpg?imwidth=140&impolicy=hq",
-//     text: "Metro Shoes",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/710657/1613028563419.jpg?imwidth=140&impolicy=hq",
-//     text: "Mochi",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/995531/1643867698366.jpg?imwidth=140&impolicy=hq",
-//     text: "Lotto",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/995533/1643867991105.jpg?imwidth=140&impolicy=hq",
-//     text: "Reliance Footwear",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/995534/1643868084258.jpg?imwidth=140&impolicy=hq",
-//     text: "Steve Madden",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/995532/1643867743019.jpg?imwidth=140&impolicy=hq",
-//     text: "Regal",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/710661/1613028718597.jpg?imwidth=140&impolicy=hq",
-//     text: "Call it Spring",
-//   },
-//   {
-//     image:
-//       "https://assetscdn1.paytm.com/images/catalog/view_item/710662/1613028739303.jpg?imwidth=140&impolicy=hq",
-//     text: "C & K",
-//   },
-// ];
+// export const DataArray3=temp.reverse()
+
+
+ export const DataArray3 = [
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/994298/1643713113821.jpg?imwidth=140&impolicy=hq",
+     text: "Tailorman",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/994348/1643715968772.jpg?imwidth=140&impolicy=hq",
+     text: "Disrupt",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/994350/1643716033149.jpg?imwidth=140&impolicy=hq",
+     text: "Simon Carter",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/995524/1643867277967.jpg?imwidth=140&impolicy=hq",
+     text: "Bata",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/995525/1643867496758.jpg?imwidth=140&impolicy=hq",
+     text: "Nike",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/995526/1643867362885.png?imwidth=140&impolicy=hq",
+     text: "Puma",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/995527/1643867532232.jpg?imwidth=140&impolicy=hq",
+     text: "Khadim's",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/995528/1643867625370.jpg?imwidth=140&impolicy=hq",
+     text: "Red Chief",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/710655/1643866806024.jpg?imwidth=140&impolicy=hq",
+     text: "Speedo",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/995529/1643867506442.jpg?imwidth=140&impolicy=hq",
+     text: "Sports Station",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/995530/1643867664954.jpg?imwidth=140&impolicy=hq",
+     text: "Woodland",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/710654/1643866837835.jpg?imwidth=140&impolicy=hq",
+     text: "Metro Shoes",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/710657/1613028563419.jpg?imwidth=140&impolicy=hq",
+     text: "Mochi",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/995531/1643867698366.jpg?imwidth=140&impolicy=hq",
+     text: "Lotto",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/995533/1643867991105.jpg?imwidth=140&impolicy=hq",
+     text: "Reliance Footwear",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/995534/1643868084258.jpg?imwidth=140&impolicy=hq",
+     text: "Steve Madden",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/995532/1643867743019.jpg?imwidth=140&impolicy=hq",
+     text: "Regal",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/710661/1613028718597.jpg?imwidth=140&impolicy=hq",
+     text: "Call it Spring",
+       href: "/brands/jacknjones",
+   },
+   {
+     image:
+       "https://assetscdn1.paytm.com/images/catalog/view_item/710662/1613028739303.jpg?imwidth=140&impolicy=hq",
+     text: "C & K",
+       href: "/brands/jacknjones",
+   },
+ ];
 
 export const GroceryHomeFurnishing = [
   {
@@ -402,24 +427,30 @@ export const GroceryHomeFurnishing = [
 ];
 
 export const Jewellery_Brands = [
-  {
-    image:
-      "https://assetscdn1.paytm.com/images/catalog/view_item/711188/1613028659969.png?imwidth=414&impolicy=hq",
-    text: "Kalyan | Get 20% Cashback",
-  },
-  {
-    image:
-      "https://assetscdn1.paytm.com/images/catalog/view_item/711194/1620745874093.jpg?imwidth=414&impolicy=hq",
-    text: "Jewelfeena",
-  },
-  {
-    image:
-      "https://assetscdn1.paytm.com/images/catalog/view_item/711199/1613028660058.jpg?imwidth=414&impolicy=hq",
-    text: "Tanishq",
-  },
-  {
-    image:
-      "https://assetscdn1.paytm.com/images/catalog/view_item/711200/1620745456365.jpg?imwidth=414&impolicy=hq",
-    text: "Up to 16% Cashback",
-  },
-];
+    {
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/711188/1613028659969.png?imwidth=414&impolicy=hq",
+        "text": "Kalyan | Get 20% Cashback"
+    },
+    {
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/711194/1620745874093.jpg?imwidth=414&impolicy=hq",
+        "text": "Jewelfeena"
+    },
+    {
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/711199/1613028660058.jpg?imwidth=414&impolicy=hq",
+        "text": "Tanishq"
+    },
+    {
+        "image": "https://assetscdn1.paytm.com/images/catalog/view_item/711200/1620745456365.jpg?imwidth=414&impolicy=hq",
+        "text": "Up to 16% Cashback"
+    },
+]
+
+// export const ServiceData = [
+//     {
+//         "image": "https://slimages.macysassets.com/is/image/McomMedia/media/061021INTLHOMEPAGETEAMPLATEBANNER10301_1433052.png?scl=1&fmt=webp&wid=1600"
+//     },
+    
+// ]
+
+
+                              

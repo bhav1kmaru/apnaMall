@@ -1,5 +1,3 @@
-
-
 import { ChakraProvider } from "@chakra-ui/react";
 import "../styles/slider_main.css";
 import Footer from '@/components/Footer'
@@ -22,6 +20,7 @@ export default function App({ Component, pageProps }) {
       {/* <script
 				src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 				async></script> */}
+
       <CartContextProvider>
         <ChakraProvider>
           <Head>
